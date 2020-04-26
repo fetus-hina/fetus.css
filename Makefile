@@ -14,7 +14,9 @@ dist-clean: clean
 	echo '!dist/' >> $@
 
 dist/bootstrap.css: scss/custom.scss node_modules
-	npx node-sass --output-style expanded $< $@
+	npx node-sass --output-style expanded $<\
+		| npx postcss --use autoprefixer --no-map \
+		> $@
 
 node_modules: package-lock.json
 	npm ci
