@@ -1,0 +1,27 @@
+$white: #fff;
+$black: #000;
+
+$gray-100: rgb(244, 239, 236);
+$gray-200: rgb(222, 214, 211);
+$gray-300: rgb(200, 190, 186);
+$gray-400: rgb(178, 165, 160);
+$gray-500: rgb(156, 140, 135);
+$gray-600: rgb(134, 115, 110);
+$gray-700: rgb(112,  91,  85);
+$gray-800: rgb( 90,  66,  59);
+$gray-900: rgb( 68,  41,  34);
+
+$primary: $gray-600;
+$secondary: $gray-400;
+
+$body-bg: $gray-100;
+$body-color: $gray-800;
+$headings-color: $gray-900;
+
+$link-color: $gray-900;
+$link-decoration: underline;
+$link-hover-color: $link-color;
+$link-hover-decoration: $link-decoration;
+
+$input-bg: $body-bg;
+$input-disabled-bg: $gray-300;

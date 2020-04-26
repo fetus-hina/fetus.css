@@ -1,1 +1,12 @@
+@import "vars/color";
+@import "vars/font";
+
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+.navbar {
+  a {
+    &, &:hover {
+      text-decoration: none;
+    }
+  }
+}
