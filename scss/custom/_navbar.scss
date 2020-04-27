@@ -1,0 +1,25 @@
+.navbar {
+  a {
+    &, &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+a.nav-link, .nav-link a {
+  &, &:hover {
+    text-decoration: none;
+  }
+}
+
+a.list-group-item, .list-group-item a {
+  &, &:hover {
+    text-decoration: none;
+  }
+}
+
+a.dropdown-item, .dropdown-item a {
+  &, &:hover {
+    text-decoration: none;
+  }
+}

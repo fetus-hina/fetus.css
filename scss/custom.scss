@@ -1,12 +1,11 @@
+@import "vars/math";
+
 @import "vars/color";
 @import "vars/font";
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-.navbar {
-  a {
-    &, &:hover {
-      text-decoration: none;
-    }
-  }
-}
+@import "custom/header";
+@import "custom/navbar";
+@import "custom/pagination";
+@import "custom/type";

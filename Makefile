@@ -1,4 +1,6 @@
-CSS_SOURCES := scss/custom.scss $(wildcard scss/vars/*.scss)
+CSS_SOURCES := scss/custom.scss \
+	$(wildcard scss/vars/*.scss) \
+	$(wildcard scss/custom/*.scss)
 
 .PHONY: all
 all: .gitignore dist/bootstrap.css
