@@ -1,5 +1,6 @@
 {
   "name": "@jp3cki/fetus.css",
+  "version": "4.5.0",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^9.8.1",
