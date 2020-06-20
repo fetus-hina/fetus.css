@@ -16,14 +16,9 @@ dist-clean: clean
 .gitignore:
 	curl -fsSL -o $@ 'https://www.gitignore.io/api/node'
 	echo '!dist/' >> $@
-	echo 'dist/*.tmp' >> $@
 
-dist/bootstrap.css: dist/bootstrap.css.tmp node_modules
-	npx postcss --use autoprefixer --no-map -o $@ $<
-
-dist/bootstrap.css.tmp: $(CSS_SOURCES) node_modules
-	npx node-sass --output-style expanded $< $@
-
+dist/bootstrap.css: $(CSS_SOURCES) node_modules
+	npx node-sass --output-style expanded $< | npx postcss --use autoprefixer --no-map -o $@
 
 node_modules: package-lock.json
 	npm ci
