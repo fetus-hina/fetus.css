@@ -1,11 +1,12 @@
-@import "vars/math";
+@import 'vars/math';
 
-@import "vars/color";
-@import "vars/font";
+@import 'vars/color_universal';
+@import 'vars/color';
+@import 'vars/font';
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import '../node_modules/bootstrap/scss/bootstrap';
 
-@import "custom/header";
-@import "custom/navbar";
-@import "custom/pagination";
-@import "custom/type";
+@import 'custom/header';
+@import 'custom/navbar';
+@import 'custom/pagination';
+@import 'custom/type';
