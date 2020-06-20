@@ -3,7 +3,7 @@ CSS_SOURCES := scss/custom.scss \
 	$(wildcard scss/custom/*.scss)
 
 .PHONY: all
-all: .gitignore dist/bootstrap.css
+all: .gitignore dist/bootstrap.min.css
 
 .PHONY: clean
 clean:
@@ -17,8 +17,12 @@ dist-clean: clean
 	curl -fsSL -o $@ 'https://www.gitignore.io/api/node'
 	echo '!dist/' >> $@
 
+.PRECIOUS: dist/bootstrap.css
 dist/bootstrap.css: $(CSS_SOURCES) node_modules
 	npx node-sass --output-style expanded $< | npx postcss --use autoprefixer --no-map -o $@
+
+dist/bootstrap.min.css: dist/bootstrap.css node_modules
+	npx cleancss -o $@ -O2 --skip-rebase -f 'breaks:afterRuleEnds=on:afterBlockEnds=on:afterAtRule=on' $<
 
 node_modules: package-lock.json
 	npm ci

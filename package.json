@@ -18,5 +18,8 @@
     "not op_mob <= 99",
     "not samsung <= 99",
     "not dead"
-  ]
+  ],
+  "dependencies": {
+    "clean-css-cli": "^4.3.0"
+  }
 }
