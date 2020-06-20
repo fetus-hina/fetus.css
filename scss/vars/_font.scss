@@ -5,7 +5,7 @@
 
 $font-family-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-family-sans-serif: join(
-  (-apple-system, BlinkMacSystemFont, Roboto, "Noto Sans JP", sans-serif),
+  (-apple-system, Roboto, "Noto Sans JP", sans-serif),
   $font-family-emoji
 );
 $font-family-serif: join(
