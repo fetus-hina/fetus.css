@@ -1,16 +1,17 @@
 {
   "name": "@fetus-hina/fetus.css",
-  "version": "4.5.1",
+  "version": "4.5.2",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^9.8.1",
-    "bootstrap": "^4.5.0",
+    "autoprefixer": "^10.0.1",
+    "bootstrap": "^4.5.3",
     "clean-css-cli": "^4.3.0",
     "node-sass": "^4.14.1",
-    "postcss-cli": "^7.1.1"
+    "postcss": "^8.1.1",
+    "postcss-cli": "^8.1.0"
   },
   "browserslist": [
-    "last 2 versions",
+    "last 4 versions",
     "firefox esr",
     ">= 0.2%",
     "not < 0.5% in JP",
@@ -19,8 +20,5 @@
     "not op_mob <= 99",
     "not samsung <= 99",
     "not dead"
-  ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  }
+  ]
 }
