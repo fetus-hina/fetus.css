@@ -19,7 +19,9 @@ dist-clean: clean
 
 .PRECIOUS: dist/bootstrap.css
 dist/bootstrap.css: $(CSS_SOURCES) node_modules
-	npx sass --style=expanded --charset --no-source-map --no-unicode $< | npx postcss --use autoprefixer --no-map -o $@
+	npx sass --style=expanded --charset --no-source-map --no-unicode $< \
+		| npx postcss --use autoprefixer --no-map \
+		| npx cleancss -O0 --format beautify -o $@
 
 dist/bootstrap.min.css: dist/bootstrap.css node_modules
 	npx cleancss -o $@ -O2 --skip-rebase -f 'breaks:afterRuleEnds=on:afterBlockEnds=on:afterAtRule=on' $<
