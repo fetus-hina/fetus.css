@@ -6,7 +6,6 @@
     "autoprefixer": "^10.0.1",
     "bootstrap": "^4.5.3",
     "clean-css-cli": "^4.3.0",
-    "node-sass": "^5.0.0",
     "postcss": "^8.1.6",
     "postcss-cli": "^8.2.0"
   },
@@ -20,5 +19,8 @@
     "not op_mob <= 99",
     "not samsung <= 99",
     "not dead"
-  ]
+  ],
+  "dependencies": {
+    "sass": "^1.29.0"
+  }
 }
