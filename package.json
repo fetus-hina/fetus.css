@@ -1,13 +1,14 @@
 {
   "name": "@fetus-hina/fetus.css",
-  "version": "4.5.2",
+  "version": "4.5.3",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.0.1",
     "bootstrap": "^4.5.3",
     "clean-css-cli": "^4.3.0",
     "postcss": "^8.1.6",
-    "postcss-cli": "^8.2.0"
+    "postcss-cli": "^8.2.0",
+    "sass": "^1.29.0"
   },
   "browserslist": [
     "last 4 versions",
@@ -19,8 +20,5 @@
     "not op_mob <= 99",
     "not samsung <= 99",
     "not dead"
-  ],
-  "dependencies": {
-    "sass": "^1.29.0"
-  }
+  ]
 }
