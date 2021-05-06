@@ -6,7 +6,9 @@
 
 @import '../node_modules/bootstrap/scss/bootstrap';
 
+@import 'custom/buttons';
 @import 'custom/header';
+@import 'custom/heading_color';
 @import 'custom/navbar';
 @import 'custom/pagination';
 @import 'custom/type';

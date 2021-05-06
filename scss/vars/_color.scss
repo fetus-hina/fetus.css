@@ -22,7 +22,14 @@ $header-bg: $gray-200;
 $header-color: $gray-700;
 
 $theme-colors: (
-  "light": $header-bg,
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $green,
+  "info":       $cyan,
+  "warning":    $yellow,
+  "danger":     $red,
+  "light":      $gray-300,
+  "dark":       $gray-900,
 );
 
 $link-color: $gray-900;

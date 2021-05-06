@@ -1,6 +1,6 @@
 {
   "name": "@fetus-hina/fetus.css",
-  "version": "5.0.0-alpha.0",
+  "version": "5.0.0",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.2.5",

@@ -1,0 +1,16 @@
+$tmp-colors: map-merge($theme-colors, (
+  "white": $white,
+  "body": $body-color,
+  "muted": $text-muted,
+  "black-50": rgba($black, .5),
+  "white-50": rgba($white, .5),
+  "reset": inherit,
+));
+
+@each $col-key, $col-val in $tmp-colors {
+  .text-#{$col-key} {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+      color: $col-val;
+    }
+  }
+}

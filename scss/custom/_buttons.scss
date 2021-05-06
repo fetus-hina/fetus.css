@@ -1,0 +1,25 @@
+.btn-primary {
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    color: $white;
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: $white;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $white;
+  }
+}
