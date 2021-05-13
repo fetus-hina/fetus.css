@@ -1,24 +1,13 @@
 {
   "name": "@fetus-hina/fetus.css",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.2.5",
-    "bootstrap": "^5.0.0",
+    "bootstrap": "^5.0.1",
     "clean-css-cli": "^5.3.0",
-    "postcss": "^8.2.14",
+    "postcss": "^8.2.15",
     "postcss-cli": "^8.3.1",
-    "sass": "^1.32.12"
-  },
-  "browserslist": [
-    "last 4 versions",
-    "firefox esr",
-    ">= 0.2%",
-    "not < 0.5% in JP",
-    "not kaios <= 99",
-    "not op_mini all",
-    "not op_mob <= 99",
-    "not samsung <= 99",
-    "not dead"
-  ]
+    "sass": "^1.32.13"
+  }
 }

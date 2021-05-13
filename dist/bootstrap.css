@@ -4,7 +4,7 @@
 @import url(https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap);
 /*!
- * Bootstrap v5.0.0 (https://getbootstrap.com/)
+ * Bootstrap v5.0.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -1609,6 +1609,7 @@ progress {
 }
 .table {
   --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
   --bs-table-striped-color: #5a423b;
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
   --bs-table-active-color: #5a423b;
@@ -1822,6 +1823,7 @@ progress {
   background-clip: padding-box;
   border: 1px solid #b2a5a0;
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border-radius: .25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
@@ -1834,7 +1836,7 @@ progress {
 .form-control[type=file] {
   overflow: hidden
 }
-.form-control[type=file]:not(:disabled):not(:read-only) {
+.form-control[type=file]:not(:disabled):not([readonly]) {
   cursor: pointer
 }
 .form-control:focus {
@@ -1847,7 +1849,7 @@ progress {
 .form-control::-webkit-date-and-time-value {
   height: 1.5em
 }
-.form-control:-ms-input-placeholder {
+.form-control::-moz-placeholder {
   color: #86736e;
   opacity: 1
 }
@@ -1856,13 +1858,14 @@ progress {
   opacity: 1
 }
 .form-control:disabled,
-.form-control:read-only {
+.form-control[readonly] {
   background-color: #c8beba;
   opacity: 1
 }
 .form-control::file-selector-button {
   padding: .375rem .75rem;
   margin: -.375rem -.75rem;
+  -webkit-margin-end: .75rem;
   margin-inline-end: .75rem;
   color: #5a423b;
   background-color: #ded6d3;
@@ -1879,12 +1882,13 @@ progress {
     transition: none
   }
 }
-.form-control:hover:not(:disabled):not(:read-only)::file-selector-button {
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #d3cbc8
 }
 .form-control::-webkit-file-upload-button {
   padding: .375rem .75rem;
   margin: -.375rem -.75rem;
+  -webkit-margin-end: .75rem;
   margin-inline-end: .75rem;
   color: #5a423b;
   background-color: #ded6d3;
@@ -1903,7 +1907,7 @@ progress {
     transition: none
   }
 }
-.form-control:hover:not(:disabled):not(:read-only)::-webkit-file-upload-button {
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: #d3cbc8
 }
 .form-control-plaintext {
@@ -1931,11 +1935,13 @@ progress {
 .form-control-sm::file-selector-button {
   padding: .25rem .5rem;
   margin: -.25rem -.5rem;
+  -webkit-margin-end: .5rem;
   margin-inline-end: .5rem
 }
 .form-control-sm::-webkit-file-upload-button {
   padding: .25rem .5rem;
   margin: -.25rem -.5rem;
+  -webkit-margin-end: .5rem;
   margin-inline-end: .5rem
 }
 .form-control-lg {
@@ -1947,11 +1953,13 @@ progress {
 .form-control-lg::file-selector-button {
   padding: .5rem 1rem;
   margin: -.5rem -1rem;
+  -webkit-margin-end: 1rem;
   margin-inline-end: 1rem
 }
 .form-control-lg::-webkit-file-upload-button {
   padding: .5rem 1rem;
   margin: -.5rem -1rem;
+  -webkit-margin-end: 1rem;
   margin-inline-end: 1rem
 }
 textarea.form-control {
@@ -1968,7 +1976,7 @@ textarea.form-control-lg {
   height: auto;
   padding: .375rem
 }
-.form-control-color:not(:disabled):not(:read-only) {
+.form-control-color:not(:disabled):not([readonly]) {
   cursor: pointer
 }
 .form-control-color::-moz-color-swatch {
@@ -1995,6 +2003,7 @@ textarea.form-control-lg {
   border: 1px solid #b2a5a0;
   border-radius: .25rem;
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none
 }
 .form-select:focus {
@@ -2047,6 +2056,7 @@ textarea.form-control-lg {
   background-size: contain;
   border: 1px solid rgba(0,0,0,.25);
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   -webkit-print-color-adjust: exact;
   color-adjust: exact
@@ -2133,6 +2143,7 @@ textarea.form-control-lg {
   padding: 0;
   background-color: transparent;
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none
 }
 .form-range:focus {
@@ -2185,6 +2196,7 @@ textarea.form-control-lg {
   border-radius: 1rem;
   -moz-transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  -moz-appearance: none;
   appearance: none
 }
 @media (prefers-reduced-motion:reduce) {
@@ -2238,13 +2250,13 @@ textarea.form-control-lg {
     transition: none
   }
 }
-.form-floating > .form-control:-ms-input-placeholder {
+.form-floating > .form-control::-moz-placeholder {
   color: transparent
 }
 .form-floating > .form-control::placeholder {
   color: transparent
 }
-.form-floating > .form-control:not(:-ms-input-placeholder) {
+.form-floating > .form-control:not(:-moz-placeholder-shown) {
   padding-top: 1.625rem;
   padding-bottom: .625rem
 }
@@ -2261,7 +2273,7 @@ textarea.form-control-lg {
   padding-top: 1.625rem;
   padding-bottom: .625rem
 }
-.form-floating > .form-control:not(:-ms-input-placeholder) ~ label {
+.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
   opacity: .65;
   transform: scale(.85) translateY(-.5rem) translateX(.15rem)
 }
@@ -2435,6 +2447,12 @@ textarea.form-control.is-valid {
 .input-group .form-select.is-valid,
 .was-validated .input-group .form-control:valid,
 .was-validated .input-group .form-select:valid {
+  z-index: 1
+}
+.input-group .form-control.is-valid:focus,
+.input-group .form-select.is-valid:focus,
+.was-validated .input-group .form-control:valid:focus,
+.was-validated .input-group .form-select:valid:focus {
   z-index: 3
 }
 .invalid-feedback {
@@ -2523,6 +2541,12 @@ textarea.form-control.is-invalid {
 .input-group .form-select.is-invalid,
 .was-validated .input-group .form-control:invalid,
 .was-validated .input-group .form-select:invalid {
+  z-index: 2
+}
+.input-group .form-control.is-invalid:focus,
+.input-group .form-select.is-invalid:focus,
+.was-validated .input-group .form-control:invalid:focus,
+.was-validated .input-group .form-select:invalid:focus {
   z-index: 3
 }
 .btn {
@@ -2535,7 +2559,7 @@ textarea.form-control.is-invalid {
   vertical-align: middle;
   cursor: pointer;
   -webkit-user-select: none;
-  -ms-user-select: none;
+  -moz-user-select: none;
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
@@ -4456,6 +4480,11 @@ fieldset:disabled .btn {
 .alert-dark .alert-link {
   color: #211410
 }
+@-webkit-keyframes progress-bar-stripes {
+  0% {
+    background-position-x: 1rem
+  }
+}
 @keyframes progress-bar-stripes {
   0% {
     background-position-x: 1rem
@@ -4490,10 +4519,12 @@ fieldset:disabled .btn {
   background-size: 1rem 1rem
 }
 .progress-bar-animated {
+  -webkit-animation: 1s linear infinite progress-bar-stripes;
   animation: 1s linear infinite progress-bar-stripes
 }
 @media (prefers-reduced-motion:reduce) {
   .progress-bar-animated {
+    -webkit-animation: none;
     animation: none
   }
 }
@@ -4852,7 +4883,7 @@ fieldset:disabled .btn {
 .btn-close:disabled {
   pointer-events: none;
   -webkit-user-select: none;
-  -ms-user-select: none;
+  -moz-user-select: none;
   user-select: none;
   opacity: .25
 }
@@ -4878,6 +4909,7 @@ fieldset:disabled .btn {
 }
 .toast-container {
   width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   max-width: 100%;
   pointer-events: none
@@ -4904,13 +4936,6 @@ fieldset:disabled .btn {
   padding: .75rem;
   word-wrap: break-word
 }
-.modal-open {
-  overflow: hidden
-}
-.modal-open .modal {
-  overflow-x: hidden;
-  overflow-y: auto
-}
 .modal {
   position: fixed;
   top: 0;
@@ -4919,7 +4944,8 @@ fieldset:disabled .btn {
   display: none;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   outline: 0
 }
 .modal-dialog {
@@ -5603,6 +5629,11 @@ fieldset:disabled .btn {
 .carousel-dark .carousel-caption {
   color: #000
 }
+@-webkit-keyframes spinner-border {
+  to {
+    transform: rotate(360deg)
+  }
+}
 @keyframes spinner-border {
   to {
     transform: rotate(360deg)
@@ -5616,12 +5647,22 @@ fieldset:disabled .btn {
   border: .25em solid currentColor;
   border-right-color: transparent;
   border-radius: 50%;
+  -webkit-animation: .75s linear infinite spinner-border;
   animation: .75s linear infinite spinner-border
 }
 .spinner-border-sm {
   width: 1rem;
   height: 1rem;
   border-width: .2em
+}
+@-webkit-keyframes spinner-grow {
+  0% {
+    transform: scale(0)
+  }
+  50% {
+    opacity: 1;
+    transform: none
+  }
 }
 @keyframes spinner-grow {
   0% {
@@ -5640,6 +5681,7 @@ fieldset:disabled .btn {
   background-color: currentColor;
   border-radius: 50%;
   opacity: 0;
+  -webkit-animation: .75s linear infinite spinner-grow;
   animation: .75s linear infinite spinner-grow
 }
 .spinner-grow-sm {
@@ -5649,6 +5691,7 @@ fieldset:disabled .btn {
 @media (prefers-reduced-motion:reduce) {
   .spinner-border,
   .spinner-grow {
+    -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s
   }
 }
@@ -6777,16 +6820,17 @@ fieldset:disabled .btn {
 }
 .user-select-all {
   -webkit-user-select: all!important;
+  -moz-user-select: all!important;
   user-select: all!important
 }
 .user-select-auto {
   -webkit-user-select: auto!important;
-  -ms-user-select: auto!important;
+  -moz-user-select: auto!important;
   user-select: auto!important
 }
 .user-select-none {
   -webkit-user-select: none!important;
-  -ms-user-select: none!important;
+  -moz-user-select: none!important;
   user-select: none!important
 }
 .pe-none {
