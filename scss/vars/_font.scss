@@ -19,3 +19,6 @@ $font-family-monospace: join(
 
 $small-font-size-ratio: 0.78615138; // sqrt(0.618...)
 $small-font-size: percentage($small-font-size-ratio);
+
+$code-font-size: 1em;
+$kbd-font-size: $small-font-size;

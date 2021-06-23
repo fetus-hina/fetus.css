@@ -1,3 +1,5 @@
+@use "sass:math";
+
 :root {
   --font-family-serif: #{inspect($font-family-serif)};
 }
@@ -21,9 +23,9 @@ small.small, .x-small {
 }
 
 big, .big {
-  font-size: percentage(1.0 / $small-font-size-ratio);
+  font-size: percentage(math.div(1.0, $small-font-size-ratio));
 }
 
 big.big {
-  font-size: percentage(1.0 / ($small-font-size-ratio * $small-font-size-ratio));
+  font-size: percentage(math.div(1.0, ($small-font-size-ratio * $small-font-size-ratio)));
 }

@@ -5,5 +5,5 @@ $sqrt-3: math.sqrt(3); // 1.7320508076;
 $sqrt-4: math.sqrt(4); // 2.0;
 $sqrt-5: math.sqrt(5); // 2.2360679775;
 
-$golden-ratio: ((1 + $sqrt-5) / 2); // 1.618
-$golden-ratio-1: (1 / $golden-ratio); // 0.618
+$golden-ratio: math.div((1 + $sqrt-5), 2); // 1.618
+$golden-ratio-1: math.div(1, $golden-ratio); // 0.618
