@@ -1,13 +1,13 @@
 .btn-primary {
-  color: $white;
+  color: var(--bs-white, $white);
 
   &:hover {
-    color: $white;
+    color: var(--bs-white, $white);
   }
 
   .btn-check:focus + &,
   &:focus {
-    color: $white;
+    color: var(--bs-white, $white);
   }
 
   .btn-check:checked + &,
@@ -15,11 +15,11 @@
   &:active,
   &.active,
   .show > &.dropdown-toggle {
-    color: $white;
+    color: var(--bs-white, $white);
   }
 
   &:disabled,
   &.disabled {
-    color: $white;
+    color: var(--bs-white, $white);
   }
 }
