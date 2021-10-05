@@ -4,7 +4,7 @@
 @import url(https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap);
 /*!
- * Bootstrap v5.1.1 (https://getbootstrap.com/)
+ * Bootstrap v5.1.2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -617,9 +617,9 @@ progress {
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) * -.5);
-  margin-left: calc(var(--bs-gutter-x) * -.5)
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x))
 }
 .row > * {
   flex-shrink: 0;
@@ -1665,8 +1665,8 @@ progress {
 .table > thead {
   vertical-align: bottom
 }
-.table > :not(:last-child) > :last-child > * {
-  border-bottom-color: currentColor
+.table > :not(:first-child) {
+  border-top: 2px solid currentColor
 }
 .caption-top {
   caption-side: top
@@ -1683,7 +1683,10 @@ progress {
 .table-borderless > :not(caption) > * > * {
   border-bottom-width: 0
 }
-.table-striped > tbody > tr:nth-of-type(odd) {
+.table-borderless > :not(:first-child) {
+  border-top-width: 0
+}
+.table-striped > tbody > tr:nth-of-type(odd) > * {
   --bs-table-accent-bg: var(--bs-table-striped-bg);
   color: var(--bs-table-striped-color)
 }
@@ -1691,7 +1694,7 @@ progress {
   --bs-table-accent-bg: var(--bs-table-active-bg);
   color: var(--bs-table-active-color)
 }
-.table-hover > tbody > tr:hover {
+.table-hover > tbody > tr:hover > * {
   --bs-table-accent-bg: var(--bs-table-hover-bg);
   color: var(--bs-table-hover-color)
 }
@@ -2100,13 +2103,15 @@ textarea.form-control-lg {
   padding-top: .25rem;
   padding-bottom: .25rem;
   padding-left: .5rem;
-  font-size: .875rem
+  font-size: .875rem;
+  border-radius: .2rem
 }
 .form-select-lg {
   padding-top: .5rem;
   padding-bottom: .5rem;
   padding-left: 1rem;
-  font-size: 1.25rem
+  font-size: 1.25rem;
+  border-radius: .3rem
 }
 .form-check {
   display: block;
@@ -2627,6 +2632,7 @@ textarea.form-control.is-invalid {
 }
 .btn {
   display: inline-block;
+  align-self: center;
   font-weight: 400;
   line-height: 1.5;
   color: #5a423b;
@@ -6167,13 +6173,13 @@ fieldset:disabled .btn {
   --bs-aspect-ratio: 100%
 }
 .ratio-4x3 {
-  --bs-aspect-ratio: calc(3 / 4 * 100%)
+  --bs-aspect-ratio: 75%
 }
 .ratio-16x9 {
-  --bs-aspect-ratio: calc(9 / 16 * 100%)
+  --bs-aspect-ratio: 56.25%
 }
 .ratio-21x9 {
-  --bs-aspect-ratio: calc(9 / 21 * 100%)
+  --bs-aspect-ratio: 42.8571428571%
 }
 .fixed-top {
   position: fixed;
