@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<svg
+  height="512"
+  version="1.1"
+  viewBox="0 0 512 512"
+  width="512"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <metadata>
+    Copyright (C) AIZAWA Hina. All rights reserved.
+  </metadata>
+  <defs>
+    <linearGradient id="background-gradient" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ded6d3" />
+      <stop offset="100%" stop-color="#c7b9b4" />
+    </linearGradient>
+    <linearGradient id="border-gradient" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#b2a5a0" />
+      <stop offset="100%" stop-color="#9f8f89" />
+    </linearGradient>
+    <linearGradient id="face-gradient" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#705b55" />
+      <stop offset="100%" stop-color="#62504a" />
+    </linearGradient>
+  </defs>
+  <rect
+    fill="url(#background-gradient)"
+    height="96.875%"
+    rx="12.5%"
+    ry="12.5%"
+    stroke-width="3.125%"
+    stroke="url(#border-gradient)"
+    width="96.875%"
+    x="1.5625%"
+    y="1.5625%"
+  />
+  <path
+    fill="url(#face-gradient)"
+    d="M321 752q41 0 73.5 -7.5t49.5 -14.5q-3 -33 -13 -68t-18 -58h-34l-44 95q-26 0 -43.5 -5.5t-28 -21.5t-15.5 -45.5t-5 -76.5v-50h106v-63h-106v-374q52 -6 96 -24v-39h-306v39q31 18 66 24v374h-76v39q35 22 76 33v35q0 62 17.5 102.5t47.5 64t70.5 32.5t86.5 9z"
+    transform="translate(132, -105) scale(1, -1) scale(0.57) translate(0, -1009)"
+  >
+    <metadata>
+      Copyright (c) 2010 ParaType Ltd. All rights reserved.
+    </metadata>
+  </path>
+</svg>
