@@ -1,6 +1,75 @@
 @charset 'UTF-8';
 @use 'sass:map';
 
+$lato: (
+  'Lato': (
+    dir-name: 'lato',
+    styles: (
+      lato-regular: (
+        style: normal,
+        weight: normal,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+      lato-italic: (
+        style: italic,
+        weight: normal,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+      lato-bold: (
+        style: normal,
+        weight: bold,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+      lato-bold-italic: (
+        style: italic,
+        weight: bold,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+    ),
+  ),
+  'Lato Latin': (
+    dir-name: 'lato',
+    styles: (
+      lato-latin-regular: (
+        style: normal,
+        weight: normal,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+      lato-latin-italic: (
+        style: italic,
+        weight: normal,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+      lato-latin-bold: (
+        style: normal,
+        weight: bold,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+      lato-latin-bold-italic: (
+        style: italic,
+        weight: bold,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+    ),
+  ),
+);
+
 $noto-sans: (
   'Noto Sans JP': (
     dir-name: 'noto-sans-jp-subset',
@@ -173,6 +242,7 @@ $ubuntu-mono: (
 );
 
 $all: ();
+$all: map.merge($all, $lato);
 $all: map.merge($all, $noto-sans);
 $all: map.merge($all, $noto-serif);
 $all: map.merge($all, $pt-serif);

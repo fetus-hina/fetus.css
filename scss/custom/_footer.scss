@@ -1,0 +1,18 @@
+@charset 'UTF-8';
+
+footer {
+  --bs-bg-opacity: 1;
+  --bs-footer-font-family: #{$font-family-footer};
+
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+  border-top: 1px solid var(--bs-light);
+  color: var(--bs-body-color);
+  font-family: var(--bs-footer-font-family);
+  font-size: var(--bs-body-font-size);
+  font-style: normal;
+  font-weight: normal;
+  line-height: var(--bs-body-line-height);
+  margin: 1.5rem 0 0;
+  padding: 1rem 0;
+  text-align: end;
+}

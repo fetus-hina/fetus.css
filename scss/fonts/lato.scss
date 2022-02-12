@@ -1,0 +1,6 @@
+@charset 'UTF-8';
+
+@use 'mixin/generator';
+@use 'vars/fonts';
+
+@include generator.webfont(fonts.$lato, '');

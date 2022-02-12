@@ -1,6 +1,70 @@
 @charset "UTF-8";
 @font-face {
   font-display: swap;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Lato"), url("fonts/lato/lato-regular.woff2") format("woff2"), url("fonts/lato/lato-regular.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: normal;
+  src: local("Lato"), url("fonts/lato/lato-italic.woff2") format("woff2"), url("fonts/lato/lato-italic.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Lato"), url("fonts/lato/lato-bold.woff2") format("woff2"), url("fonts/lato/lato-bold.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: bold;
+  src: local("Lato"), url("fonts/lato/lato-bold-italic.woff2") format("woff2"), url("fonts/lato/lato-bold-italic.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Lato Latin";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Lato Latin"), url("fonts/lato/lato-latin-regular.woff2") format("woff2"), url("fonts/lato/lato-latin-regular.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Lato Latin";
+  font-style: italic;
+  font-weight: normal;
+  src: local("Lato Latin"), url("fonts/lato/lato-latin-italic.woff2") format("woff2"), url("fonts/lato/lato-latin-italic.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Lato Latin";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Lato Latin"), url("fonts/lato/lato-latin-bold.woff2") format("woff2"), url("fonts/lato/lato-latin-bold.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Lato Latin";
+  font-style: italic;
+  font-weight: bold;
+  src: local("Lato Latin"), url("fonts/lato/lato-latin-bold-italic.woff2") format("woff2"), url("fonts/lato/lato-latin-bold-italic.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
   font-family: "Noto Sans JP";
   font-style: normal;
   font-weight: normal;
@@ -11442,6 +11506,22 @@ textarea.form-control-lg {
 }
 .btn-primary:disabled, .btn-primary.disabled {
   color: var(--bs-white, #fff);
+}
+
+footer {
+  --bs-bg-opacity: 1;
+  --bs-footer-font-family: Lato Latin, Lato, -apple-system, Roboto, Noto Sans JP, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+  border-top: 1px solid var(--bs-light);
+  color: var(--bs-body-color);
+  font-family: var(--bs-footer-font-family);
+  font-size: var(--bs-body-font-size);
+  font-style: normal;
+  font-weight: normal;
+  line-height: var(--bs-body-line-height);
+  margin: 1.5rem 0 0;
+  padding: 1rem 0;
+  text-align: end;
 }
 
 header {

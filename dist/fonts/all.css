@@ -1,5 +1,69 @@
 @font-face {
   font-display: swap;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Lato"), url("lato/lato-regular.woff2") format("woff2"), url("lato/lato-regular.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: normal;
+  src: local("Lato"), url("lato/lato-italic.woff2") format("woff2"), url("lato/lato-italic.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Lato"), url("lato/lato-bold.woff2") format("woff2"), url("lato/lato-bold.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: bold;
+  src: local("Lato"), url("lato/lato-bold-italic.woff2") format("woff2"), url("lato/lato-bold-italic.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Lato Latin";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Lato Latin"), url("lato/lato-latin-regular.woff2") format("woff2"), url("lato/lato-latin-regular.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Lato Latin";
+  font-style: italic;
+  font-weight: normal;
+  src: local("Lato Latin"), url("lato/lato-latin-italic.woff2") format("woff2"), url("lato/lato-latin-italic.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Lato Latin";
+  font-style: normal;
+  font-weight: bold;
+  src: local("Lato Latin"), url("lato/lato-latin-bold.woff2") format("woff2"), url("lato/lato-latin-bold.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Lato Latin";
+  font-style: italic;
+  font-weight: bold;
+  src: local("Lato Latin"), url("lato/lato-latin-bold-italic.woff2") format("woff2"), url("lato/lato-latin-bold-italic.woff") format("woff");
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-display: swap;
   font-family: "Noto Sans JP";
   font-style: normal;
   font-weight: normal;

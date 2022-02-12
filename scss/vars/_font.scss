@@ -3,18 +3,22 @@
 
 @include generator.webfont(fonts.$all, 'fonts/');
 
-$font-family-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 $font-family-sans-serif: join(
-  (-apple-system, Roboto, "Noto Sans JP", sans-serif),
-  $font-family-emoji
+  (-apple-system, Roboto, 'Noto Sans JP', sans-serif),
+  $font-family-emoji,
 );
 $font-family-serif: join(
-  ("PT Serif", "Noto Serif JP", serif),
-  $font-family-emoji
+  ('PT Serif', 'Noto Serif JP', serif),
+  $font-family-emoji,
 );
 $font-family-monospace: join(
-  ("Ubuntu Mono", "Noto Sans JP", monospace),
-  $font-family-emoji
+  ('Ubuntu Mono', 'Noto Sans JP', monospace),
+  $font-family-emoji,
+);
+$font-family-footer: join(
+  ('Lato Latin', 'Lato'),
+  $font-family-sans-serif,
 );
 
 $small-font-size-ratio: 0.78615138; // sqrt(0.618...)
