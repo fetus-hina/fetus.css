@@ -4,6 +4,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("PT Serif"), url("pt-serif/ptf55f_w.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -11,6 +12,7 @@
   font-style: italic;
   font-weight: normal;
   src: local("PT Serif"), url("pt-serif/ptf56f_w.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -18,6 +20,7 @@
   font-style: normal;
   font-weight: bold;
   src: local("PT Serif"), url("pt-serif/ptf75f_w.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -25,6 +28,7 @@
   font-style: italic;
   font-weight: bold;
   src: local("PT Serif"), url("pt-serif/ptf76f_w.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -32,6 +36,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("PT Serif Caption"), url("pt-serif/ptz55f_w.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -39,4 +44,5 @@
   font-style: italic;
   font-weight: normal;
   src: local("PT Serif Caption"), url("pt-serif/ptz56f_w.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }

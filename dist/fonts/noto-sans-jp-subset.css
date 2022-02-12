@@ -4,6 +4,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Noto Sans JP"), url("noto-sans-jp-subset/noto-sans-jp-regular.woff2") format("woff2"), url("noto-sans-jp-subset/noto-sans-jp-regular.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -11,4 +12,5 @@
   font-style: normal;
   font-weight: bold;
   src: local("Noto Sans JP"), url("noto-sans-jp-subset/noto-sans-jp-bold.woff2") format("woff2"), url("noto-sans-jp-subset/noto-sans-jp-bold.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }

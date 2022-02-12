@@ -5,6 +5,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Noto Sans JP"), url("fonts/noto-sans-jp-subset/noto-sans-jp-regular.woff2") format("woff2"), url("fonts/noto-sans-jp-subset/noto-sans-jp-regular.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -12,6 +13,7 @@
   font-style: normal;
   font-weight: bold;
   src: local("Noto Sans JP"), url("fonts/noto-sans-jp-subset/noto-sans-jp-bold.woff2") format("woff2"), url("fonts/noto-sans-jp-subset/noto-sans-jp-bold.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -19,6 +21,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Noto Serif JP"), url("fonts/noto-serif-jp-subset/noto-serif-jp-regular.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -26,6 +29,7 @@
   font-style: normal;
   font-weight: bold;
   src: local("Noto Serif JP"), url("fonts/noto-serif-jp-subset/noto-serif-jp-bold.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -33,6 +37,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("PT Serif"), url("fonts/pt-serif/ptf55f_w.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -40,6 +45,7 @@
   font-style: italic;
   font-weight: normal;
   src: local("PT Serif"), url("fonts/pt-serif/ptf56f_w.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -47,6 +53,7 @@
   font-style: normal;
   font-weight: bold;
   src: local("PT Serif"), url("fonts/pt-serif/ptf75f_w.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -54,6 +61,7 @@
   font-style: italic;
   font-weight: bold;
   src: local("PT Serif"), url("fonts/pt-serif/ptf76f_w.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -61,6 +69,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("PT Serif Caption"), url("fonts/pt-serif/ptz55f_w.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -68,6 +77,7 @@
   font-style: italic;
   font-weight: normal;
   src: local("PT Serif Caption"), url("fonts/pt-serif/ptz56f_w.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -75,6 +85,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Roboto"), url("fonts/roboto/roboto-regular.woff2") format("woff2"), url("fonts/roboto/roboto-regular.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -82,6 +93,7 @@
   font-style: italic;
   font-weight: normal;
   src: local("Roboto"), url("fonts/roboto/roboto-italic.woff2") format("woff2"), url("fonts/roboto/roboto-italic.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -89,6 +101,7 @@
   font-style: normal;
   font-weight: bold;
   src: local("Roboto"), url("fonts/roboto/roboto-bold.woff2") format("woff2"), url("fonts/roboto/roboto-bold.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -96,6 +109,7 @@
   font-style: italic;
   font-weight: bold;
   src: local("Roboto"), url("fonts/roboto/roboto-bold-italic.woff2") format("woff2"), url("fonts/roboto/roboto-bold-italic.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -103,6 +117,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Ubuntu Mono"), url("fonts/ubuntu-mono/ubuntumono-r.woff2") format("woff2"), url("fonts/ubuntu-mono/ubuntumono-r.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -110,6 +125,7 @@
   font-style: italic;
   font-weight: normal;
   src: local("Ubuntu Mono"), url("fonts/ubuntu-mono/ubuntumono-ri.woff2") format("woff2"), url("fonts/ubuntu-mono/ubuntumono-ri.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -117,6 +133,7 @@
   font-style: normal;
   font-weight: bold;
   src: local("Ubuntu Mono"), url("fonts/ubuntu-mono/ubuntumono-b.woff2") format("woff2"), url("fonts/ubuntu-mono/ubuntumono-b.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -124,6 +141,7 @@
   font-style: italic;
   font-weight: bold;
   src: local("Ubuntu Mono"), url("fonts/ubuntu-mono/ubuntumono-bi.woff2") format("woff2"), url("fonts/ubuntu-mono/ubuntumono-bi.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)

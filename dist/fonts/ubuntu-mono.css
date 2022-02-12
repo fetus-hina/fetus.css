@@ -4,6 +4,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Ubuntu Mono"), url("ubuntu-mono/ubuntumono-r.woff2") format("woff2"), url("ubuntu-mono/ubuntumono-r.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -11,6 +12,7 @@
   font-style: italic;
   font-weight: normal;
   src: local("Ubuntu Mono"), url("ubuntu-mono/ubuntumono-ri.woff2") format("woff2"), url("ubuntu-mono/ubuntumono-ri.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -18,6 +20,7 @@
   font-style: normal;
   font-weight: bold;
   src: local("Ubuntu Mono"), url("ubuntu-mono/ubuntumono-b.woff2") format("woff2"), url("ubuntu-mono/ubuntumono-b.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -25,4 +28,5 @@
   font-style: italic;
   font-weight: bold;
   src: local("Ubuntu Mono"), url("ubuntu-mono/ubuntumono-bi.woff2") format("woff2"), url("ubuntu-mono/ubuntumono-bi.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }

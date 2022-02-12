@@ -4,6 +4,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Noto Serif JP"), url("noto-serif-jp-subset/noto-serif-jp-regular.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
 @font-face {
   font-display: swap;
@@ -11,4 +12,5 @@
   font-style: normal;
   font-weight: bold;
   src: local("Noto Serif JP"), url("noto-serif-jp-subset/noto-serif-jp-bold.woff") format("woff");
+  text-rendering: optimizeLegibility;
 }
