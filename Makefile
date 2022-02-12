@@ -2,6 +2,7 @@ CSS_SOURCES := scss/custom.scss \
 	$(wildcard scss/custom/*.scss) \
 	$(wildcard scss/vars/*.scss) \
 	scss/fonts/pt-serif.scss \
+	scss/fonts/roboto.scss \
 	scss/fonts/ubuntu-mono.scss
 
 FONT_CSS_SOURCES := $(wildcard scss/fonts/*.scss)
