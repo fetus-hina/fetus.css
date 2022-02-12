@@ -1,6 +1,11 @@
 CSS_SOURCES := scss/custom.scss \
+	$(wildcard scss/custom/*.scss) \
 	$(wildcard scss/vars/*.scss) \
-	$(wildcard scss/custom/*.scss)
+	scss/fonts/pt-serif.scss \
+	scss/fonts/ubuntu-mono.scss
+
+FONT_CSS_SOURCES := $(wildcard scss/fonts/*.scss)
+FONT_CSS_TARGETS := $(addprefix dist/fonts/,$(notdir $(FONT_CSS_SOURCES:.scss=.min.css)))
 
 FAVICON_TARGETS := \
 	dist/favicon/apple-touch-icon-114.png \
@@ -16,11 +21,15 @@ FAVICON_TARGETS := \
 	dist/favicon/favicon.svg
 
 .PHONY: all
-all: .browserslistrc .gitignore dist/bootstrap.min.css $(FAVICON_TARGETS)
+all: .browserslistrc .gitignore dist/bootstrap.min.css $(FONT_CSS_TARGETS) $(FAVICON_TARGETS)
 
 .PHONY: clean
 clean:
-	rm -rf dist/*
+	rm -rf \
+		$(FONT_CSS_TARGETS) \
+		$(FONT_CSS_TARGETS:.min.css=.css) \
+		dist/*.css \
+		dist/favicon
 
 .PHONY: dist-clean
 dist-clean: clean
@@ -42,11 +51,17 @@ depends:
 
 .PRECIOUS: dist/bootstrap.css
 dist/bootstrap.css: $(CSS_SOURCES) node_modules .browserslistrc
-	npx sass --style=expanded --charset --no-source-map --no-unicode $< \
-		| npx postcss --use autoprefixer --no-map -o $@
+	npx sass --style=expanded --charset --no-source-map --no-unicode $< | npx postcss --use autoprefixer --no-map -o $@
+	@touch $@
 
-dist/bootstrap.min.css: dist/bootstrap.css node_modules .browserslistrc
+.PRECIOUS: dist/fonts/%.css
+dist/fonts/%.css: scss/fonts/%.scss node_modules .browserslistrc
+	npx sass --style=expanded --charset --no-source-map --no-unicode $< | npx postcss --use autoprefixer --no-map -o $@
+	@touch $@
+
+%.min.css: %.css node_modules .browserslistrc
 	npx postcss --use cssnano --no-map -o $@ $<
+	@touch $@
 
 dist/favicon/%.svg: favicon/%.svg node_modules .svgo.config.js
 	@mkdir -p $(dir $@)
