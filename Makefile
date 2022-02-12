@@ -1,11 +1,9 @@
+FONT_CSS_USES := $(wildcard scss/fonts/mixin/*.scss) $(wildcard scss/fonts/vars/*.scss)
+
 CSS_SOURCES := scss/custom.scss \
+	$(FONT_CSS_USES) \
 	$(wildcard scss/custom/*.scss) \
-	$(wildcard scss/vars/*.scss) \
-	scss/fonts/noto-sans-jp-subset.scss \
-	scss/fonts/noto-serif-jp-subset.scss \
-	scss/fonts/pt-serif.scss \
-	scss/fonts/roboto.scss \
-	scss/fonts/ubuntu-mono.scss
+	$(wildcard scss/vars/*.scss)
 
 FONT_CSS_SOURCES := $(wildcard scss/fonts/*.scss)
 FONT_CSS_TARGETS := $(addprefix dist/fonts/,$(notdir $(FONT_CSS_SOURCES:.scss=.min.css)))
@@ -62,7 +60,7 @@ dist/bootstrap.css: $(CSS_SOURCES) node_modules .browserslistrc
 	@touch $@
 
 .PRECIOUS: dist/fonts/%.css
-dist/fonts/%.css: scss/fonts/%.scss node_modules .browserslistrc
+dist/fonts/%.css: scss/fonts/%.scss $(FONT_CSS_USES) node_modules .browserslistrc
 	npx sass --style=expanded --charset --no-source-map --no-unicode $< | npx postcss --use autoprefixer --no-map -o $@
 	@touch $@
 

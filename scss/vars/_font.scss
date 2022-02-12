@@ -1,8 +1,7 @@
-@use '../fonts/noto-sans-jp-subset' with ($font-path-prefix: 'fonts/');
-@use '../fonts/noto-serif-jp-subset' with ($font-path-prefix: 'fonts/');
-@use '../fonts/pt-serif' with ($font-path-prefix: 'fonts/');
-@use '../fonts/roboto' with ($font-path-prefix: 'fonts/');
-@use '../fonts/ubuntu-mono' with ($font-path-prefix: 'fonts/');
+@use '../fonts/vars/fonts';
+@use '../fonts/mixin/generator';
+
+@include generator.webfont(fonts.$all, 'fonts/');
 
 $font-family-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-family-sans-serif: join(

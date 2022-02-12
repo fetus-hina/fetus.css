@@ -1,0 +1,180 @@
+@charset 'UTF-8';
+@use 'sass:map';
+
+$noto-sans: (
+  'Noto Sans JP': (
+    dir-name: 'noto-sans-jp-subset',
+    styles: (
+      noto-sans-jp-regular: (
+        style: normal,
+        weight: normal,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+      noto-sans-jp-bold: (
+        style: normal,
+        weight: bold,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+    ),
+  ),
+);
+
+$noto-serif: (
+  'Noto Serif JP': (
+    dir-name: 'noto-serif-jp-subset',
+    styles: (
+      noto-serif-jp-regular: (
+        style: normal,
+        weight: normal,
+        local: true,
+        woff: true,
+        woff2: false,
+      ),
+      noto-serif-jp-bold: (
+        style: normal,
+        weight: bold,
+        local: true,
+        woff: true,
+        woff2: false,
+      ),
+    ),
+  ),
+);
+
+$pt-serif: (
+  'PT Serif': (
+    dir-name: 'pt-serif',
+    styles: (
+      ptf55f_w: (
+        style: normal,
+        weight: normal,
+        local: true,
+        woff: true,
+        woff2: false,
+      ),
+      ptf56f_w: (
+        style: italic,
+        weight: normal,
+        local: true,
+        woff: true,
+        woff2: false,
+      ),
+      ptf75f_w: (
+        style: normal,
+        weight: bold,
+        local: true,
+        woff: true,
+        woff2: false,
+      ),
+      ptf76f_w: (
+        style: italic,
+        weight: bold,
+        local: true,
+        woff: true,
+        woff2: false,
+      ),
+    ),
+  ),
+  'PT Serif Caption': (
+    dir-name: 'pt-serif',
+    styles: (
+      ptz55f_w: (
+        style: normal,
+        weight: normal,
+        local: true,
+        woff: true,
+        woff2: false,
+      ),
+      ptz56f_w: (
+        style: italic,
+        weight: normal,
+        local: true,
+        woff: true,
+        woff2: false,
+      ),
+    ),
+  ),
+);
+
+$roboto: (
+  'Roboto': (
+    dir-name: 'roboto',
+    styles: (
+      roboto-regular: (
+        style: normal,
+        weight: normal,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+      roboto-italic: (
+        style: italic,
+        weight: normal,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+      roboto-bold: (
+        style: normal,
+        weight: bold,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+      roboto-bold-italic: (
+        style: italic,
+        weight: bold,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+    ),
+  ),
+);
+
+$ubuntu-mono: (
+  'Ubuntu Mono': (
+    dir-name: 'ubuntu-mono',
+    styles: (
+      ubuntumono-r: (
+        style: normal,
+        weight: normal,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+      ubuntumono-ri: (
+        style: italic,
+        weight: normal,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+      ubuntumono-b: (
+        style: normal,
+        weight: bold,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+      ubuntumono-bi: (
+        style: italic,
+        weight: bold,
+        local: true,
+        woff: true,
+        woff2: true,
+      ),
+    ),
+  ),
+);
+
+$all: ();
+$all: map.merge($all, $noto-sans);
+$all: map.merge($all, $noto-serif);
+$all: map.merge($all, $pt-serif);
+$all: map.merge($all, $roboto);
+$all: map.merge($all, $ubuntu-mono);

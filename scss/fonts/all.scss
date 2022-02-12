@@ -3,4 +3,4 @@
 @use 'mixin/generator';
 @use 'vars/fonts';
 
-@include generator.webfont(fonts.$pt-serif, '');
+@include generator.webfont(fonts.$all, '');

@@ -1,27 +1,6 @@
 @charset 'UTF-8';
-@use 'sass:list';
 
-$font-path-prefix: '' !default;
+@use 'mixin/generator';
+@use 'vars/fonts';
 
-$fonts: (
-  'Roboto': (
-    'roboto-regular': (normal, normal),
-    'roboto-italic': (normal, italic),
-    'roboto-bold': (bold, normal),
-    'roboto-bold-italic': (bold, italic),
-  ),
-);
-
-@each $font-name, $patterns in $fonts {
-  @each $base-name, $styles in $patterns {
-    @font-face {
-      font-display: swap;
-      font-family: $font-name;
-      font-style: list.nth($styles, 2);
-      font-weight: list.nth($styles, 1);
-      src: local($font-name),
-        url('#{$font-path-prefix}roboto/#{$base-name}.woff2') format('woff2'),
-        url('#{$font-path-prefix}roboto/#{$base-name}.woff') format('woff');
-    }
-  }
-}
+@include generator.webfont(fonts.$roboto, '');

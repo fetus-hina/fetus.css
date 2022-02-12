@@ -1,0 +1,28 @@
+@charset 'UTF-8';
+@use 'sass:list';
+@use 'sass:map';
+
+@mixin webfont($fonts, $font-path-prefix: '') {
+  @each $font-name, $data in $fonts {
+    @each $base-name, $style in map.get($data, 'styles') {
+      $srcs: ();
+      @if map.get($style, 'local') {
+        $srcs: list.append($srcs, local($font-name), $separator: comma);
+      }
+      @if map.get($style, 'woff2') {
+        $srcs: list.append($srcs, url('#{$font-path-prefix}#{map.get($data, 'dir-name')}/#{$base-name}.woff2') format('woff2'), $separator: comma);
+      }
+      @if map.get($style, 'woff') {
+        $srcs: list.append($srcs, url('#{$font-path-prefix}#{map.get($data, 'dir-name')}/#{$base-name}.woff') format('woff'), $separator: comma);
+      }
+
+      @font-face {
+        font-display: swap;
+        font-family: $font-name;
+        font-style: map.get($style, 'style');
+        font-weight: map.get($style, 'weight');
+        src: $srcs;
+      }
+    }
+  }
+}
