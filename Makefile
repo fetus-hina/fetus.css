@@ -41,6 +41,10 @@ depends:
 	npx updates -u
 	npm install
 
+.PHONY: check-style
+check-style: node_modules
+	npx stylelint 'scss/fonts/**/*.scss'
+
 .gitignore:
 	curl -fsSL -o $@ 'https://www.gitignore.io/api/node'
 	echo '!dist/' >> $@
