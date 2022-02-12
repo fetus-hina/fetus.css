@@ -1,0 +1,24 @@
+@charset 'UTF-8';
+@use 'sass:list';
+
+$font-path-prefix: '' !default;
+
+$fonts: (
+  'Noto Serif JP': (
+    'noto-serif-jp-regular': (normal, normal),
+    'noto-serif-jp-bold': (bold, normal),
+  ),
+);
+
+@each $font-name, $patterns in $fonts {
+  @each $base-name, $styles in $patterns {
+    @font-face {
+      font-display: swap;
+      font-family: $font-name;
+      font-style: list.nth($styles, 2);
+      font-weight: list.nth($styles, 1);
+      src: local($font-name),
+        url('#{$font-path-prefix}noto-serif-jp-subset/#{$base-name}.woff') format('woff');
+    }
+  }
+}
