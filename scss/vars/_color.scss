@@ -37,5 +37,6 @@ $link-decoration: underline;
 $link-hover-color: $link-color;
 $link-hover-decoration: $link-decoration;
 
-$input-bg: $body-bg;
-$input-disabled-bg: $gray-300;
+$input-bg: var(--bs-body-bg);
+$input-disabled-bg: var(--bs-light);
+$input-placeholder-color: var(--bs-light);

@@ -2428,7 +2428,7 @@ progress {
   font-weight: 400;
   line-height: 1.5;
   color: #5a423b;
-  background-color: #f4efec;
+  background-color: var(--bs-body-bg);
   background-clip: padding-box;
   border: 1px solid #b2a5a0;
   -webkit-appearance: none;
@@ -2450,7 +2450,7 @@ progress {
 }
 .form-control:focus {
   color: #5a423b;
-  background-color: #f4efec;
+  background-color: var(--bs-body-bg);
   border-color: #c3b9b7;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(134, 115, 110, 0.25);
@@ -2459,15 +2459,15 @@ progress {
   height: 1.5em;
 }
 .form-control::-moz-placeholder {
-  color: #86736e;
+  color: var(--bs-light);
   opacity: 1;
 }
 .form-control::placeholder {
-  color: #86736e;
+  color: var(--bs-light);
   opacity: 1;
 }
 .form-control:disabled, .form-control[readonly] {
-  background-color: #c8beba;
+  background-color: var(--bs-light);
   opacity: 1;
 }
 .form-control::-webkit-file-upload-button {
@@ -2644,7 +2644,7 @@ textarea.form-control-lg {
   font-weight: 400;
   line-height: 1.5;
   color: #5a423b;
-  background-color: #f4efec;
+  background-color: var(--bs-body-bg);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%235a423b' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
@@ -2710,7 +2710,7 @@ textarea.form-control-lg {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
-  background-color: #f4efec;
+  background-color: var(--bs-body-bg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
