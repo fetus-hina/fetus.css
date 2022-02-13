@@ -21,14 +21,25 @@ FAVICON_TARGETS := \
 	dist/favicon/favicon.ico \
 	dist/favicon/favicon.svg
 
+GZIP_TARGETS := \
+	$(FONT_CSS_TARGETS:.min.css=.css.gz) \
+	$(FONT_CSS_TARGETS:.min.css=.min.css.gz) \
+	dist/bootstrap.css.gz \
+	dist/bootstrap.min.css.gz \
+	dist/favicon/favicon.svg.gz
+
+BROTLI_TARGETS := $(GZIP_TARGETS:.gz=.br)
+
 .PHONY: all
-all: .browserslistrc .gitignore dist/bootstrap.min.css $(FONT_CSS_TARGETS) $(FAVICON_TARGETS)
+all: .browserslistrc .gitignore dist/bootstrap.min.css $(FONT_CSS_TARGETS) $(FAVICON_TARGETS) $(GZIP_TARGETS) $(BROTLI_TARGETS)
 
 .PHONY: clean
 clean:
 	rm -rf \
 		$(FONT_CSS_TARGETS) \
 		$(FONT_CSS_TARGETS:.min.css=.css) \
+		$(BROTLI_TARGETS) \
+		$(GZIP_TARGETS) \
 		dist/*.css \
 		dist/favicon
 
@@ -67,6 +78,12 @@ dist/fonts/%.css: scss/fonts/%.scss $(FONT_CSS_USES) node_modules .browserslistr
 %.min.css: %.css node_modules .browserslistrc
 	npx postcss --use cssnano --no-map -o $@ $<
 	@touch $@
+
+%.gz: %
+	gzip -9cknq $< > $@
+
+%.br: %
+	brotli -fkZ $<
 
 dist/favicon/%.svg: favicon/%.svg node_modules .svgo.config.js
 	@mkdir -p $(dir $@)
