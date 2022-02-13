@@ -1,6 +1,7 @@
 @charset 'UTF-8';
 @use 'sass:list';
 @use 'sass:map';
+@use 'sass:string';
 
 @mixin webfont($fonts, $font-path-prefix: '') {
   @each $font-name, $data in $fonts {
@@ -23,6 +24,9 @@
         font-weight: map.get($style, 'weight');
         src: $srcs;
         text-rendering: optimizeLegibility;
+        @if map.has-key($data, 'unicode-range') {
+          unicode-range: string.unquote(map.get($data, 'unicode-range'));
+        }
       }
     }
   }
