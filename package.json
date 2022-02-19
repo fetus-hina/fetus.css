@@ -9,10 +9,10 @@
     "pngcrush-bin": "^6.0.1",
     "postcss": "^8.4.6",
     "postcss-cli": "^9.1.0",
-    "sass": "^1.49.7",
-    "stylelint": "^14.5.0",
+    "sass": "^1.49.8",
+    "stylelint": "^14.5.1",
     "stylelint-config-sass-guidelines": "^9.0.1",
     "svgo": "^2.8.0",
-    "updates": "^13.0.0"
+    "updates": "^13.0.2"
   }
 }
