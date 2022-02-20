@@ -5,6 +5,8 @@ CSS_SOURCES := scss/custom.scss \
 	$(wildcard scss/custom/*.scss) \
 	$(wildcard scss/vars/*.scss)
 
+JS_SOURCES := $(wildcard js/*.js)
+
 FONT_CSS_SOURCES := $(wildcard scss/fonts/*.scss)
 FONT_CSS_TARGETS := $(addprefix dist/fonts/,$(notdir $(FONT_CSS_SOURCES:.scss=.min.css)))
 
@@ -26,21 +28,26 @@ GZIP_TARGETS := \
 	$(FONT_CSS_TARGETS:.min.css=.min.css.gz) \
 	dist/bootstrap.css.gz \
 	dist/bootstrap.min.css.gz \
-	dist/favicon/favicon.svg.gz
+	dist/favicon/favicon.svg.gz \
+	dist/fetus-css.js \
+	dist/fetus-css.js.gz \
+	dist/fetus-css.min.js \
+	dist/fetus-css.min.js.gz
 
 BROTLI_TARGETS := $(GZIP_TARGETS:.gz=.br)
 
 .PHONY: all
-all: .browserslistrc .gitignore dist/bootstrap.min.css $(FONT_CSS_TARGETS) $(FAVICON_TARGETS) $(GZIP_TARGETS) $(BROTLI_TARGETS)
+all: .browserslistrc .gitignore dist/bootstrap.min.css dist/fetus-css.min.js $(FONT_CSS_TARGETS) $(FAVICON_TARGETS) $(GZIP_TARGETS) $(BROTLI_TARGETS)
 
 .PHONY: clean
 clean:
 	rm -rf \
+		$(BROTLI_TARGETS) \
 		$(FONT_CSS_TARGETS) \
 		$(FONT_CSS_TARGETS:.min.css=.css) \
-		$(BROTLI_TARGETS) \
 		$(GZIP_TARGETS) \
 		dist/*.css \
+		dist/*.js \
 		dist/favicon
 
 .PHONY: dist-clean
@@ -54,8 +61,15 @@ depends:
 	npm install
 
 .PHONY: check-style
-check-style: node_modules
+check-style: check-style-css check-style-js
+
+.PHONY: check-style-css
+check-style-css: node_modules
 	npx stylelint 'scss/fonts/**/*.scss'
+
+.PHONY: check-style-js
+check-style-js: node_modules
+	npx semistandard 'js/**/*.js'
 
 .gitignore:
 	curl -fsSL -o $@ 'https://www.gitignore.io/api/node'
@@ -79,11 +93,22 @@ dist/fonts/%.css: scss/fonts/%.scss $(FONT_CSS_USES) node_modules .browserslistr
 	npx postcss --use cssnano --no-map -o $@ $<
 	@touch $@
 
+.PRECIOUS: dist/fetus-css.js
+dist/fetus-css.js: js/index.js $(JS_SOURCES) node_modules .browserslistrc
+	npx browserify --transform babelify -o $@ $<
+	@touch $@
+
+%.min.js: %.js node_modules .browserslistrc
+	npx terser -c -m -f ascii_only=true -o $@ $<
+	@touch $@
+
 %.gz: %
 	gzip -9cknq $< > $@
+	@touch $@
 
 %.br: %
 	brotli -fkZ $<
+	@touch $@
 
 dist/favicon/%.svg: favicon/%.svg node_modules .svgo.config.js
 	@mkdir -p $(dir $@)

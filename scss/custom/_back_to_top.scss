@@ -1,0 +1,38 @@
+.back-to-top-action-button {
+  --bs-bg-opacity: 1;
+  --bs-text-opacity: 1;
+  --bs-back-to-top-background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+  --bs-back-to-top-text-color: rgba(var(--bs-light-rgb), var(--bs-text-opacity));
+  --bs-back-to-top-opacity: 0.5;
+
+  background-color: var(--bs-back-to-top-background-color) !important;
+  border-radius: 50%;
+  bottom: 10px;
+  box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
+  color: var(--bs-back-to-top-text-color) !important;
+  display: block;
+  font-size: 24px;
+  height: 56px;
+  opacity: var(--bs-back-to-top-opacity);
+  position: fixed;
+  right: 10px;
+  transition: opacity 0.2s cubic-bezier(0.37, 0, 0.63, 1);
+  width: 56px;
+
+  &:hover {
+    --bs-back-to-top-opacity: 0.4;
+  }
+
+  svg {
+    display: inline-block;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 15px;
+    width: 100%;
+  }
+}
+
+footer.has-action-button {
+  padding-bottom: calc(56px + 1rem);
+}

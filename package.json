@@ -3,16 +3,23 @@
   "version": "5.1.7",
   "license": "MIT",
   "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
     "autoprefixer": "^10.4.2",
+    "babelify": "^10.0.0",
     "bootstrap": "^5.1.3",
+    "browserify": "^17.0.0",
+    "core-js": "^3.21.1",
     "cssnano": "^5.0.17",
     "pngcrush-bin": "^6.0.1",
     "postcss": "^8.4.6",
     "postcss-cli": "^9.1.0",
+    "regenerator-runtime": "^0.13.9",
     "sass": "^1.49.8",
+    "semistandard": "^16.0.1",
     "stylelint": "^14.5.1",
     "stylelint-config-sass-guidelines": "^9.0.1",
     "svgo": "^2.8.0",
+    "terser": "^5.10.0",
     "updates": "^13.0.2"
   }
 }
