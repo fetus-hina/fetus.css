@@ -11,15 +11,15 @@
     "core-js": "^3.21.1",
     "cssnano": "^5.0.17",
     "pngcrush-bin": "^6.0.1",
-    "postcss": "^8.4.6",
+    "postcss": "^8.4.7",
     "postcss-cli": "^9.1.0",
     "regenerator-runtime": "^0.13.9",
-    "sass": "^1.49.8",
+    "sass": "^1.49.9",
     "semistandard": "^16.0.1",
-    "stylelint": "^14.5.1",
+    "stylelint": "^14.5.3",
     "stylelint-config-sass-guidelines": "^9.0.1",
     "svgo": "^2.8.0",
-    "terser": "^5.10.0",
+    "terser": "^5.11.0",
     "updates": "^13.0.2"
   }
 }
