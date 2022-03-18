@@ -3,4 +3,4 @@
 @use 'mixin/generator';
 @use 'vars/fonts';
 
-@include generator.webfont(fonts.$ubuntu-mono, '');
+@include generator.webfont(fonts.$redhat-mono, '');
