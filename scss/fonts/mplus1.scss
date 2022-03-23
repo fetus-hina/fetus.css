@@ -1,0 +1,7 @@
+@charset 'UTF-8';
+
+@use 'mixin/mplus1bold';
+@use 'mixin/mplus1regular';
+
+@include mplus1regular.generate('mplus1/');
+@include mplus1bold.generate('mplus1/');

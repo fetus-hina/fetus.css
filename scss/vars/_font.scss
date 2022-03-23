@@ -1,11 +1,15 @@
-@use '../fonts/vars/fonts';
 @use '../fonts/mixin/generator';
+@use '../fonts/mixin/mplus1bold';
+@use '../fonts/mixin/mplus1regular';
+@use '../fonts/vars/fonts';
 
 @include generator.webfont(fonts.$all, 'fonts/');
+@include mplus1regular.generate('fonts/mplus1/');
+@include mplus1bold.generate('fonts/mplus1/');
 
 $font-family-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 $font-family-sans-serif: join(
-  (-apple-system, Roboto, 'Noto Sans JP', sans-serif),
+  (-apple-system, Roboto, 'M PLUS 1', sans-serif),
   $font-family-emoji,
 );
 $font-family-serif: join(
@@ -13,7 +17,7 @@ $font-family-serif: join(
   $font-family-emoji,
 );
 $font-family-monospace: join(
-  ('Red Hat Mono', 'Noto Sans JP', monospace),
+  ('Red Hat Mono', monospace),
   $font-family-emoji,
 );
 $font-family-footer: join(

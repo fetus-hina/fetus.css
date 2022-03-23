@@ -1,6 +1,10 @@
 @charset 'UTF-8';
 
 @use 'mixin/generator';
+@use 'mixin/mplus1bold';
+@use 'mixin/mplus1regular';
 @use 'vars/fonts';
 
 @include generator.webfont(fonts.$all, '');
+@include mplus1regular.generate('');
+@include mplus1bold.generate('');
