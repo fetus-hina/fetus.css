@@ -11990,13 +11990,15 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-@media (min-width: 992px) {
-  p,
-div[class^=col],
-.text-smooth {
+.smoothing {
+  transform: none;
+}
+@media only screen and (min-width: 992px) {
+  .smoothing {
     transform: rotate(0.03deg);
   }
 }
+
 .btn-primary {
   color: var(--bs-white, #fff);
 }

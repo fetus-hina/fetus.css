@@ -1,7 +1,11 @@
-@include media-breakpoint-up(lg) {
-  p,
-  div[class^=col],
-  .text-smooth {
+@charset 'UTF-8';
+
+@use 'sass:map';
+
+.smoothing {
+  transform: none;
+
+  @media only screen and (min-width: map.get($grid-breakpoints, 'lg')) {
     transform: rotate(0.03deg);
   }
 }
