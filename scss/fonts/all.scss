@@ -1,10 +1,14 @@
 @charset 'UTF-8';
 
+@use 'mixin/bizudpgothic_bold' as biz_bold;
+@use 'mixin/bizudpgothic_regular' as biz_regular;
 @use 'mixin/generator';
 @use 'mixin/mplus1bold';
 @use 'mixin/mplus1regular';
 @use 'vars/fonts';
 
 @include generator.webfont(fonts.$all, '');
-@include mplus1regular.generate('');
+@include biz_bold.generate('');
+@include biz_regular.generate('');
 @include mplus1bold.generate('');
+@include mplus1regular.generate('');

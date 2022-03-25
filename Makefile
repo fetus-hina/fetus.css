@@ -1,9 +1,11 @@
 FONT_CSS_USES := $(wildcard scss/fonts/mixin/*.scss) $(wildcard scss/fonts/vars/*.scss)
 
-CSS_SOURCES := scss/custom.scss \
+CSS_SOURCES := \
 	$(FONT_CSS_USES) \
 	$(wildcard scss/custom/*.scss) \
-	$(wildcard scss/vars/*.scss)
+	$(wildcard scss/vars/*.scss) \
+	scss/bizudpgothic.scss \
+	scss/custom.scss
 
 JS_SOURCES := $(wildcard js/*.js)
 
@@ -26,6 +28,8 @@ FAVICON_TARGETS := \
 GZIP_TARGETS := \
 	$(FONT_CSS_TARGETS:.min.css=.css.gz) \
 	$(FONT_CSS_TARGETS:.min.css=.min.css.gz) \
+	dist/bootstrap-bizudpgothic.css.gz \
+	dist/bootstrap-bizudpgothic.min.css.gz \
 	dist/bootstrap.css.gz \
 	dist/bootstrap.min.css.gz \
 	dist/favicon/favicon.svg.gz \
@@ -36,8 +40,19 @@ GZIP_TARGETS := \
 
 BROTLI_TARGETS := $(GZIP_TARGETS:.gz=.br)
 
+ALL_TARGETS := \
+	.browserslistrc \
+	.gitignore \
+	dist/bootstrap-bizudpgothic.min.css \
+	dist/bootstrap.min.css \
+	dist/fetus-css.min.js \
+	$(FONT_CSS_TARGETS) \
+	$(FAVICON_TARGETS) \
+	$(GZIP_TARGETS) \
+	$(BROTLI_TARGETS)
+
 .PHONY: all
-all: .browserslistrc .gitignore dist/bootstrap.min.css dist/fetus-css.min.js $(FONT_CSS_TARGETS) $(FAVICON_TARGETS) $(GZIP_TARGETS) $(BROTLI_TARGETS)
+all: $(ALL_TARGETS)
 
 .PHONY: clean
 clean:
@@ -80,7 +95,12 @@ check-style-js: node_modules
 	curl -fsSL -o $@ 'https://raw.githubusercontent.com/twbs/bootstrap/main/.browserslistrc'
 
 .PRECIOUS: dist/bootstrap.css
-dist/bootstrap.css: $(CSS_SOURCES) node_modules .browserslistrc
+dist/bootstrap.css: scss/custom.scss $(CSS_SOURCES) node_modules .browserslistrc
+	npx sass --style=expanded --charset --no-source-map --no-unicode $< | npx postcss --use autoprefixer --no-map -o $@
+	@touch $@
+
+.PRECIOUS: dist/bootstrap-bizudpgothic.css
+dist/bootstrap-bizudpgothic.css: scss/bizudpgothic.scss $(CSS_SOURCES) node_modules .browserslistrc
 	npx sass --style=expanded --charset --no-source-map --no-unicode $< | npx postcss --use autoprefixer --no-map -o $@
 	@touch $@
 

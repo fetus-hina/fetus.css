@@ -1,6 +1,6 @@
 {
   "name": "@fetus-hina/fetus.css",
-  "version": "5.1.11",
+  "version": "5.1.12",
   "license": "MIT",
   "devDependencies": {
     "@babel/preset-env": "^7.16.11",
@@ -16,7 +16,7 @@
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.49.9",
     "semistandard": "^16.0.1",
-    "stylelint": "^14.6.0",
+    "stylelint": "^14.6.1",
     "stylelint-config-sass-guidelines": "^9.0.1",
     "svgo": "^2.8.0",
     "terser": "^5.12.1",

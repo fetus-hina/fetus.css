@@ -1,0 +1,7 @@
+@charset 'UTF-8';
+
+@use 'mixin/bizudpgothic_bold' as bold;
+@use 'mixin/bizudpgothic_regular' as regular;
+
+@include regular.generate('bizudpgothic/');
+@include bold.generate('bizudpgothic/');

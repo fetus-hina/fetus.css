@@ -1,17 +1,34 @@
+@use '../fonts/mixin/bizudpgothic_bold';
+@use '../fonts/mixin/bizudpgothic_regular';
 @use '../fonts/mixin/generator';
 @use '../fonts/mixin/mplus1bold';
 @use '../fonts/mixin/mplus1regular';
 @use '../fonts/vars/fonts';
 
-@include generator.webfont(fonts.$all, 'fonts/');
-@include mplus1regular.generate('fonts/mplus1/');
-@include mplus1bold.generate('fonts/mplus1/');
-
+$japanese-font: 'mplus1' !default;
 $font-family-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-$font-family-sans-serif: join(
-  (-apple-system, Roboto, 'M PLUS 1', sans-serif),
-  $font-family-emoji,
-);
+
+@include generator.webfont(fonts.$all, 'fonts/');
+
+$font-family-sans-serif: '';
+@if $japanese-font == 'bizudpgothic' {
+  @include bizudpgothic_regular.generate('fonts/bizudpgothic/');
+  @include bizudpgothic_bold.generate('fonts/bizudpgothic/');
+  $font-family-sans-serif: join(
+    (-apple-system, Roboto, 'BIZ UDPGothic', sans-serif),
+    $font-family-emoji,
+  );
+} @else if $japanese-font == 'mplus1' {
+  @include mplus1regular.generate('fonts/mplus1/');
+  @include mplus1bold.generate('fonts/mplus1/');
+  $font-family-sans-serif: join(
+    (-apple-system, Roboto, 'M PLUS 1', sans-serif),
+    $font-family-emoji,
+  );
+} @else {
+  @error 'variable $japanese-font is invalid';
+}
+
 $font-family-serif: join(
   ('PT Serif', 'Noto Serif JP', serif),
   $font-family-emoji,
