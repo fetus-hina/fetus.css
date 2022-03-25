@@ -988,7 +988,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 90, 66, 59;
   --bs-body-bg-rgb: 244, 239, 236;
-  --bs-font-sans-serif: -apple-system, Roboto, "BIZ UDPGothic", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: -apple-system, "BIZ UDPGothic", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: "Red Hat Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -12242,7 +12242,7 @@ textarea.form-control-lg {
 
 footer {
   --bs-bg-opacity: 1;
-  --bs-footer-font-family: Lato Latin, Lato, -apple-system, Roboto, BIZ UDPGothic, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-footer-font-family: Lato Latin, Lato, -apple-system, BIZ UDPGothic, Roboto, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
   border-top: 1px solid var(--bs-light);
   color: var(--bs-body-color);
@@ -12353,7 +12353,7 @@ a.dropdown-item, a.dropdown-item:hover, .dropdown-item a, .dropdown-item a:hover
 }
 
 .text-sans, .text-sans-serif {
-  font-family: -apple-system, Roboto, "BIZ UDPGothic", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, "BIZ UDPGothic", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .text-serif {

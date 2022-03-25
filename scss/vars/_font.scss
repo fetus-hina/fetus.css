@@ -15,7 +15,7 @@ $font-family-sans-serif: '';
   @include bizudpgothic_regular.generate('fonts/bizudpgothic/');
   @include bizudpgothic_bold.generate('fonts/bizudpgothic/');
   $font-family-sans-serif: join(
-    (-apple-system, Roboto, 'BIZ UDPGothic', sans-serif),
+    (-apple-system, 'BIZ UDPGothic', Roboto, sans-serif),
     $font-family-emoji,
   );
 } @else if $japanese-font == 'mplus1' {
