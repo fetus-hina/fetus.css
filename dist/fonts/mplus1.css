@@ -21,9 +21,9 @@
   font-family: "M PLUS 1";
   font-style: normal;
   font-weight: 400;
-  src: local("M PLUS 1"), url("mplus1/mplus1-regular/03-30af55226d45ce70.woff2") format("woff2"), url("mplus1/mplus1-regular/03-30af55226d45ce70.woff") format("woff");
+  src: local("M PLUS 1"), url("mplus1/mplus1-regular/03-828fc4b7eb19e1d7.woff2") format("woff2"), url("mplus1/mplus1-regular/03-828fc4b7eb19e1d7.woff") format("woff");
   text-rendering: optimizeLegibility;
-  unicode-range: U+A1-AC, U+AE-BF, U+C5, U+D7, U+F7, U+2015, U+2018-2019, U+201C-201D, U+2020-2021, U+2026, U+2030, U+2070, U+2074, U+2116, U+2248, U+2260, U+25A0, U+25B2, U+25BC, U+3005-3006, U+3008-3009, U+300C-300F, U+3231-3232, U+4EDD;
+  unicode-range: U+A1-AC, U+AE-BF, U+C5, U+D7, U+F7, U+2015, U+2018-2019, U+201C-201D, U+2020-2021, U+2026, U+2030, U+2070, U+2074, U+2116, U+2248, U+2260, U+25A0, U+25B2, U+25BC, U+3005-3006, U+3008-3009, U+300C-300F, U+301C, U+3231-3232, U+4EDD;
 }
 @font-face {
   font-display: swap;
@@ -264,9 +264,9 @@
   font-family: "M PLUS 1";
   font-style: normal;
   font-weight: 700;
-  src: local("M PLUS 1"), url("mplus1/mplus1-bold/03-393b2dd7d8331304.woff2") format("woff2"), url("mplus1/mplus1-bold/03-393b2dd7d8331304.woff") format("woff");
+  src: local("M PLUS 1"), url("mplus1/mplus1-bold/03-a7044a9000f0819a.woff2") format("woff2"), url("mplus1/mplus1-bold/03-a7044a9000f0819a.woff") format("woff");
   text-rendering: optimizeLegibility;
-  unicode-range: U+A1-AC, U+AE-BF, U+C5, U+D7, U+F7, U+2015, U+2018-2019, U+201C-201D, U+2020-2021, U+2026, U+2030, U+2070, U+2074, U+2116, U+2248, U+2260, U+25A0, U+25B2, U+25BC, U+3005-3006, U+3008-3009, U+300C-300F, U+3231-3232, U+4EDD;
+  unicode-range: U+A1-AC, U+AE-BF, U+C5, U+D7, U+F7, U+2015, U+2018-2019, U+201C-201D, U+2020-2021, U+2026, U+2030, U+2070, U+2074, U+2116, U+2248, U+2260, U+25A0, U+25B2, U+25BC, U+3005-3006, U+3008-3009, U+300C-300F, U+301C, U+3231-3232, U+4EDD;
 }
 @font-face {
   font-display: swap;
