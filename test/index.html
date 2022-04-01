@@ -16,6 +16,10 @@
         z-index: 1;
         display: block;
       }
+
+      .meiryo {
+        font-family: 'Meiryo';
+      }
     </style>
   </head>
   <body class="back-to-top-auto">
@@ -406,6 +410,12 @@
               <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
               <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
             </div>
+          </div>
+        </div>
+
+        <div class="row cautionary-characters">
+          <div class="col-lg-12">
+            <h2 id="type-cautionary">Cautionary Characters</h2>
           </div>
         </div>
 
@@ -1472,6 +1482,7 @@
     ></script>
     <script src="bootstrap.bundle.min.js"></script>
     <script src="fetus-css.min.js"></script>
+    <script src="cautionary-characters.js"></script>
     <script>
       const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
       const popoverList = popoverTriggerList.map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
