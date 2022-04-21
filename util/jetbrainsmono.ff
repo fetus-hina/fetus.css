@@ -1,0 +1,15 @@
+#!/usr/bin/env fontforge
+
+Open($1, 1);
+
+# Remove controls
+Select(0u00, 0u1f, 0u7f);
+Cut();
+
+# Copy slashed-zero to ASCII-zero position
+Select("zero.zero");
+Cut();
+Select(0u30);
+Paste();
+
+Generate($2);
