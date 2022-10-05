@@ -940,7 +940,7 @@
   unicode-range: U+9F2F, U+9F37, U+9F3A, U+9F3D, U+9F41, U+9F45-9F46, U+9F53, U+9F55, U+9F58, U+9F5D, U+9F69, U+9F6D, U+9F70, U+9F75, U+FA13, U+FA20-FA21, U+FA24, U+FA49, U+FA58, U+FA5D-FA5E, U+FA66, U+20089, U+200A2, U+200A4, U+201A2, U+20213, U+2032B, U+20371, U+20381, U+203F9, U+2044A, U+20509, U+205D6, U+20628, U+2074F, U+20807, U+2083A, U+208B9, U+2097C, U+2099D, U+20AD3, U+20B1D, U+20D45, U+20DE1, U+20E64, U+20E6D, U+20E95, U+20F5F, U+21201, U+21255, U+21274, U+2127B, U+212D7, U+212E4, U+212FD, U+21336, U+21344, U+213C4, U+2146D, U+215D7, U+21647, U+21706, U+21742, U+219C3, U+21C56, U+21D2D, U+21D45, U+21D62, U+21D78, U+21D92, U+21D9C, U+21DA1, U+21DB7, U+21DE0, U+21E33, U+21F1E, U+21F76, U+21FFA, U+2217B, U+22218, U+2231E, U+223AD, U+226F3, U+2285B, U+228AB, U+2298F, U+22AB8, U+22B46, U+22B4F-22B50, U+22BA6, U+22C1D, U+22C24, U+22DE1, U+231B6, U+231C3, U+231F5, U+23372, U+233D0, U+233D2-233D3, U+233D5, U+233DA, U+233DF, U+233E4, U+2344A-2344B, U+23451, U+23465, U+234E4, U+2355A, U+23594, U+23638-2363A, U+23647, U+2370C, U+2371C, U+23764, U+237E7, U+237FF, U+23824, U+2383D, U+23A98, U+23C7F, U+23D00, U+23D0E, U+23D40, U+23DD3, U+23DF9-23DFA, U+23F7E, U+24096, U+24103, U+241C6, U+241FE, U+243BC, U+24629, U+246A5, U+24896, U+24A4D, U+24B56, U+24B6F, U+24C16, U+24D14, U+24E0E, U+24E37, U+24E6A, U+24E8B, U+2504A, U+25055, U+25122, U+251A9, U+251CD, U+251E5, U+2521E, U+2524C, U+2542E, U+254D9, U+255A7, U+257A9, U+257B4, U+259D4, U+25AE3-25AE4, U+25AF1, U+25BB2, U+25C4B, U+25C64, U+25E2E, U+25E56, U+25E62, U+25E65, U+25EC2, U+25ED8, U+25EE8, U+25F23, U+25F5C, U+25FD4, U+25FE0, U+25FFB, U+2600C, U+26017, U+26060, U+260ED, U+26270, U+26286, U+2634C, U+26402, U+2667E, U+266B0, U+2671D, U+268DD, U+268EA, U+26951, U+2696F, U+269DD, U+26A1E, U+26A58, U+26A8C, U+26AB7, U+26C29, U+26C73, U+26CDD, U+26E65, U+26F94, U+26FF6-26FF8, U+2710D, U+27139, U+273DA-273DB, U+273FE, U+27410, U+27449, U+27614-27615, U+27631, U+27693, U+2770E, U+27723, U+27752, U+27985, U+27A84, U+27BB3, U+27BBE, U+27BC7, U+27CB8, U+27DA0, U+27E10, U+27FB7, U+2808A, U+280BB, U+28282, U+282F3, U+2840C, U+28455, U+2856B, U+285C8-285C9, U+286D7, U+286FA, U+28946, U+28949, U+2896B, U+28987-28988, U+289BA-289BB, U+28A1E, U+28A29, U+28A43, U+28A71, U+28A99, U+28ACD, U+28ADD, U+28AE4, U+28BC1, U+28BEF, U+28D10, U+28D71, U+28DFB, U+28E1F, U+28E36, U+28E89, U+28EEB, U+28F32, U+28FF8, U+292A0, U+292B1, U+29490, U+295CF, U+2967F, U+296F0, U+29719, U+29750, U+298C6, U+29A72, U+29DDB, U+29E15, U+29E3D, U+29E49, U+29E8A, U+29EC4, U+29EDB, U+29EE9, U+29FCE, U+2A01A, U+2A02F, U+2A082, U+2A0F9, U+2A38C, U+2A437, U+2A5F1, U+2A602, U+2A61A, U+2A6B2;
 }
 /*!
- * Bootstrap  v5.2.1 (https://getbootstrap.com/)
+ * Bootstrap  v5.2.2 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -3783,11 +3783,16 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-:not(.btn-check) + .btn:hover, .btn:first-child:hover {
+.btn:hover {
   color: var(--bs-btn-hover-color);
   text-decoration: none;
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
+}
+.btn-check + .btn:hover {
+  color: var(--bs-btn-color);
+  background-color: var(--bs-btn-bg);
+  border-color: var(--bs-btn-border-color);
 }
 .btn:focus-visible {
   color: var(--bs-btn-hover-color);
@@ -5314,7 +5319,7 @@ textarea.form-control-lg {
 }
 
 .accordion {
-  --bs-accordion-color: var(--bs-body-color);
+  --bs-accordion-color: rgb(90, 66, 59);
   --bs-accordion-bg: rgb(244, 239, 236);
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
   --bs-accordion-border-color: var(--bs-border-color);
@@ -5323,9 +5328,9 @@ textarea.form-control-lg {
   --bs-accordion-inner-border-radius: calc(0.375rem - 1px);
   --bs-accordion-btn-padding-x: 1.25rem;
   --bs-accordion-btn-padding-y: 1rem;
-  --bs-accordion-btn-color: var(--bs-body-color);
+  --bs-accordion-btn-color: rgb(90, 66, 59);
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='var%28--bs-body-color%29'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgb%2890, 66, 59%29'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
@@ -5711,12 +5716,6 @@ textarea.form-control-lg {
   color: #211410;
 }
 
-@-webkit-keyframes progress-bar-stripes {
-  0% {
-    background-position-x: 1rem;
-  }
-}
-
 @keyframes progress-bar-stripes {
   0% {
     background-position-x: 1rem;
@@ -5762,13 +5761,11 @@ textarea.form-control-lg {
 }
 
 .progress-bar-animated {
-  -webkit-animation: 1s linear infinite progress-bar-stripes;
-          animation: 1s linear infinite progress-bar-stripes;
+  animation: 1s linear infinite progress-bar-stripes;
 }
 @media (prefers-reduced-motion: reduce) {
   .progress-bar-animated {
-    -webkit-animation: none;
-            animation: none;
+    animation: none;
   }
 }
 
@@ -6191,6 +6188,7 @@ textarea.form-control-lg {
 }
 
 .toast-container {
+  --bs-toast-zindex: 1090;
   position: absolute;
   z-index: var(--bs-toast-zindex);
   width: -webkit-max-content;
@@ -6989,14 +6987,7 @@ textarea.form-control-lg {
   height: var(--bs-spinner-height);
   vertical-align: var(--bs-spinner-vertical-align);
   border-radius: 50%;
-  -webkit-animation: var(--bs-spinner-animation-speed) linear infinite var(--bs-spinner-animation-name);
-          animation: var(--bs-spinner-animation-speed) linear infinite var(--bs-spinner-animation-name);
-}
-
-@-webkit-keyframes spinner-border {
-  to {
-    transform: rotate(360deg) /* rtl:ignore */;
-  }
+  animation: var(--bs-spinner-animation-speed) linear infinite var(--bs-spinner-animation-name);
 }
 
 @keyframes spinner-border {
@@ -7019,16 +7010,6 @@ textarea.form-control-lg {
   --bs-spinner-width: 1rem;
   --bs-spinner-height: 1rem;
   --bs-spinner-border-width: 0.2em;
-}
-
-@-webkit-keyframes spinner-grow {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    opacity: 1;
-    transform: none;
-  }
 }
 
 @keyframes spinner-grow {
@@ -7637,14 +7618,7 @@ textarea.form-control-lg {
 }
 
 .placeholder-glow .placeholder {
-  -webkit-animation: placeholder-glow 2s ease-in-out infinite;
-          animation: placeholder-glow 2s ease-in-out infinite;
-}
-
-@-webkit-keyframes placeholder-glow {
-  50% {
-    opacity: 0.2;
-  }
+  animation: placeholder-glow 2s ease-in-out infinite;
 }
 
 @keyframes placeholder-glow {
@@ -7657,15 +7631,7 @@ textarea.form-control-lg {
           mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
   -webkit-mask-size: 200% 100%;
           mask-size: 200% 100%;
-  -webkit-animation: placeholder-wave 2s linear infinite;
-          animation: placeholder-wave 2s linear infinite;
-}
-
-@-webkit-keyframes placeholder-wave {
-  100% {
-    -webkit-mask-position: -200% 0%;
-            mask-position: -200% 0%;
-  }
+  animation: placeholder-wave 2s linear infinite;
 }
 
 @keyframes placeholder-wave {
