@@ -3,23 +3,23 @@
   "version": "5.2.2",
   "license": "MIT",
   "devDependencies": {
-    "@babel/preset-env": "^7.19.3",
-    "autoprefixer": "^10.4.12",
+    "@babel/preset-env": "^7.19.4",
+    "autoprefixer": "^10.4.13",
     "babelify": "^10.0.0",
     "bootstrap": "^5.2.2",
     "browserify": "^17.0.0",
-    "core-js": "^3.25.5",
-    "cssnano": "^5.1.13",
+    "core-js": "^3.26.0",
+    "cssnano": "^5.1.14",
     "pngcrush-bin": "^7.0.0",
-    "postcss": "^8.4.17",
+    "postcss": "^8.4.18",
     "postcss-cli": "^10.0.0",
-    "regenerator-runtime": "^0.13.9",
+    "regenerator-runtime": "^0.13.10",
     "sass": "^1.55.0",
     "semistandard": "^16.0.1",
-    "stylelint": "^14.13.0",
+    "stylelint": "^14.14.0",
     "stylelint-config-sass-guidelines": "^9.0.1",
-    "svgo": "^2.8.0",
-    "terser": "^5.15.0",
-    "updates": "^13.1.8"
+    "svgo": "^3.0.0",
+    "terser": "^5.15.1",
+    "updates": "^13.1.13"
   }
 }
