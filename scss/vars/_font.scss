@@ -1,6 +1,8 @@
 @use '../fonts/mixin/bizudpgothic_bold';
 @use '../fonts/mixin/bizudpgothic_regular';
 @use '../fonts/mixin/generator';
+@use '../fonts/mixin/lineseedjp_bold';
+@use '../fonts/mixin/lineseedjp_regular';
 @use '../fonts/mixin/mplus1bold';
 @use '../fonts/mixin/mplus1regular';
 @use '../fonts/vars/fonts';
@@ -16,6 +18,13 @@ $font-family-sans-serif: '';
   @include bizudpgothic_bold.generate('fonts/bizudpgothic/');
   $font-family-sans-serif: join(
     (-apple-system, 'BIZ UDPGothic', Roboto, sans-serif),
+    $font-family-emoji,
+  );
+} @else if $japanese-font == 'lineseedjp' {
+  @include lineseedjp_regular.generate('fonts/lineseedjp/');
+  @include lineseedjp_bold.generate('fonts/lineseedjp/');
+  $font-family-sans-serif: join(
+    (-apple-system, 'LINE Seed JP', Roboto, sans-serif),
     $font-family-emoji,
   );
 } @else if $japanese-font == 'mplus1' {

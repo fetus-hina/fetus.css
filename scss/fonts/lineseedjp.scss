@@ -1,0 +1,7 @@
+@charset 'UTF-8';
+
+@use 'mixin/lineseedjp_bold' as bold;
+@use 'mixin/lineseedjp_regular' as regular;
+
+@include regular.generate('lineseedjp/');
+@include bold.generate('lineseedjp/');

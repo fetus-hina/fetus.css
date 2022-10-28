@@ -5,7 +5,8 @@ CSS_SOURCES := \
 	$(wildcard scss/custom/*.scss) \
 	$(wildcard scss/vars/*.scss) \
 	scss/bizudpgothic.scss \
-	scss/custom.scss
+	scss/custom.scss \
+	scss/lineseedjp.scss
 
 JS_SOURCES := $(wildcard js/*.js)
 
@@ -30,6 +31,8 @@ GZIP_TARGETS := \
 	$(FONT_CSS_TARGETS:.min.css=.min.css.gz) \
 	dist/bootstrap-bizudpgothic.css.gz \
 	dist/bootstrap-bizudpgothic.min.css.gz \
+	dist/bootstrap-lineseedjp.css.gz \
+	dist/bootstrap-lineseedjp.min.css.gz \
 	dist/bootstrap.css.gz \
 	dist/bootstrap.min.css.gz \
 	dist/favicon/favicon.svg.gz \
@@ -44,6 +47,7 @@ ALL_TARGETS := \
 	.browserslistrc \
 	.gitignore \
 	dist/bootstrap-bizudpgothic.min.css \
+	dist/bootstrap-lineseedjp.min.css \
 	dist/bootstrap.min.css \
 	dist/fetus-css.min.js \
 	$(FONT_CSS_TARGETS) \
@@ -101,6 +105,11 @@ dist/bootstrap.css: scss/custom.scss $(CSS_SOURCES) node_modules .browserslistrc
 
 .PRECIOUS: dist/bootstrap-bizudpgothic.css
 dist/bootstrap-bizudpgothic.css: scss/bizudpgothic.scss $(CSS_SOURCES) node_modules .browserslistrc
+	npx sass --style=expanded --charset --no-source-map --no-unicode $< | npx postcss --use autoprefixer --no-map -o $@
+	@touch $@
+
+.PRECIOUS: dist/bootstrap-lineseedjp.css
+dist/bootstrap-lineseedjp.css: scss/lineseedjp.scss $(CSS_SOURCES) node_modules .browserslistrc
 	npx sass --style=expanded --charset --no-source-map --no-unicode $< | npx postcss --use autoprefixer --no-map -o $@
 	@touch $@
 
