@@ -20,6 +20,6 @@
     "stylelint-config-sass-guidelines": "^9.0.1",
     "svgo": "^3.0.2",
     "terser": "^5.16.1",
-    "updates": "^13.2.3"
+    "updates": "^13.2.4"
   }
 }
