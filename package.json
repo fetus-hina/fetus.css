@@ -14,7 +14,7 @@
     "postcss": "^8.4.24",
     "postcss-cli": "^10.1.0",
     "regenerator-runtime": "^0.13.11",
-    "sass": "^1.58.0",
+    "sass": "^1.62.1",
     "semistandard": "^16.0.1",
     "stylelint": "^14.16.1",
     "stylelint-config-sass-guidelines": "^9.0.1",
