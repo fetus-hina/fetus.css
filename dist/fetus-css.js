@@ -86,7 +86,7 @@ var _backToTop = _interopRequireDefault(require("./back-to-top"));
 var _ready = _interopRequireDefault(require("./ready"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 /*! @license
- * Copyright (C) 2003, 2020-2022 AIZAWA Hina
+ * Copyright (C) 2003, 2020-2023 AIZAWA Hina
  * MIT License
  **/
 

@@ -1,5 +1,5 @@
 /*! @license
- * Copyright (C) 2003, 2020-2022 AIZAWA Hina
+ * Copyright (C) 2003, 2020-2023 AIZAWA Hina
  * MIT License
  **/
 
