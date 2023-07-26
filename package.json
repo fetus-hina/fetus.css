@@ -16,7 +16,7 @@
     "regenerator-runtime": "^0.13.11",
     "sass": "^1.62.1",
     "semistandard": "^17.0.0",
-    "stylelint": "^15.7.0",
+    "stylelint": "^15.10.2",
     "stylelint-config-sass-guidelines": "^10.0.0",
     "svgo": "^3.0.2",
     "terser": "^5.19.2",
