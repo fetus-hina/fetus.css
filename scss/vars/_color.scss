@@ -16,6 +16,7 @@ $secondary: $gray-400;
 
 $body-bg: $gray-100;
 $body-color: $gray-800;
+$body-tertiary-bg: $gray-200;
 $headings-color: $gray-900;
 
 $header-bg: $gray-200;
@@ -37,13 +38,15 @@ $link-decoration: underline;
 $link-hover-color: $link-color;
 $link-hover-decoration: $link-decoration;
 
-$input-bg: var(--bs-body-bg);
-$input-disabled-bg: var(--bs-light);
-$input-placeholder-color: var(--bs-light);
+$input-bg: var(--bs-white);
+$input-disabled-bg: var(--bs-body-bg);
+$input-placeholder-color: $gray-500;
 
 $card-bg: var(--bs-white);
+$dropdown-bg: var(--bs-white);
 $modal-content-bg: var(--bs-white);
 $modal-footer-bg: var(--bs-white);
+$pagination-bg: var(--bs-white);
 $popover-bg: var(--bs-white);
 $popover-header-bg: var(--bs-body-bg);
 $table-bg: var(--bs-white);

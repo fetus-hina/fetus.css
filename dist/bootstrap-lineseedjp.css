@@ -850,8 +850,8 @@
   --bs-secondary-bg-rgb: 222, 214, 211;
   --bs-tertiary-color: rgba(90, 66, 59, 0.5);
   --bs-tertiary-color-rgb: 90, 66, 59;
-  --bs-tertiary-bg: rgb(244, 239, 236);
-  --bs-tertiary-bg-rgb: 244, 239, 236;
+  --bs-tertiary-bg: rgb(222, 214, 211);
+  --bs-tertiary-bg-rgb: 222, 214, 211;
   --bs-heading-color: rgb(68, 41, 34);
   --bs-link-color: rgb(68, 41, 34);
   --bs-link-color-rgb: 68, 41, 34;
@@ -2881,7 +2881,7 @@ progress {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-white);
   background-clip: padding-box;
   border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
@@ -2900,7 +2900,7 @@ progress {
 }
 .form-control:focus {
   color: var(--bs-body-color);
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-white);
   border-color: #c3b9b7;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(134, 115, 110, 0.25);
@@ -2915,15 +2915,15 @@ progress {
   padding: 0;
 }
 .form-control::-moz-placeholder {
-  color: var(--bs-light);
+  color: rgb(156, 140, 135);
   opacity: 1;
 }
 .form-control::placeholder {
-  color: var(--bs-light);
+  color: rgb(156, 140, 135);
   opacity: 1;
 }
 .form-control:disabled {
-  background-color: var(--bs-light);
+  background-color: var(--bs-body-bg);
   opacity: 1;
 }
 .form-control::-webkit-file-upload-button {
@@ -3075,7 +3075,7 @@ textarea.form-control-lg {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-white);
   background-image: var(--bs-form-select-bg-img), var(--bs-form-select-bg-icon, none);
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
@@ -3099,7 +3099,7 @@ textarea.form-control-lg {
   background-image: none;
 }
 .form-select:disabled {
-  background-color: var(--bs-light);
+  background-color: var(--bs-body-bg);
 }
 .form-select:-moz-focusring {
   color: transparent;
@@ -3149,7 +3149,7 @@ textarea.form-control-lg {
 }
 
 .form-check-input {
-  --bs-form-check-bg: var(--bs-body-bg);
+  --bs-form-check-bg: var(--bs-white);
   width: 1em;
   height: 1em;
   margin-top: 0.25em;
@@ -3426,7 +3426,7 @@ textarea.form-control-lg {
   z-index: -1;
   height: 1.5em;
   content: "";
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-white);
   border-radius: var(--bs-border-radius);
 }
 .form-floating > .form-control:focus ~ label::after,
@@ -3438,7 +3438,7 @@ textarea.form-control-lg {
   z-index: -1;
   height: 1.5em;
   content: "";
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-white);
   border-radius: var(--bs-border-radius);
 }
 .form-floating > .form-control:-webkit-autofill ~ label {
@@ -3454,7 +3454,7 @@ textarea.form-control-lg {
 }
 .form-floating > :disabled ~ label::after,
 .form-floating > .form-control:disabled ~ label::after {
-  background-color: var(--bs-light);
+  background-color: var(--bs-body-bg);
 }
 
 .input-group {
@@ -4189,7 +4189,7 @@ textarea.form-control-lg {
   --bs-dropdown-spacer: 0.125rem;
   --bs-dropdown-font-size: 1rem;
   --bs-dropdown-color: var(--bs-body-color);
-  --bs-dropdown-bg: var(--bs-body-bg);
+  --bs-dropdown-bg: var(--bs-white);
   --bs-dropdown-border-color: var(--bs-border-color-translucent);
   --bs-dropdown-border-radius: var(--bs-border-radius);
   --bs-dropdown-border-width: var(--bs-border-width);
@@ -5504,7 +5504,7 @@ textarea.form-control-lg {
   --bs-pagination-padding-y: 0.375rem;
   --bs-pagination-font-size: 1rem;
   --bs-pagination-color: var(--bs-link-color);
-  --bs-pagination-bg: var(--bs-body-bg);
+  --bs-pagination-bg: var(--bs-white);
   --bs-pagination-border-width: var(--bs-border-width);
   --bs-pagination-border-color: var(--bs-border-color);
   --bs-pagination-border-radius: var(--bs-border-radius);
