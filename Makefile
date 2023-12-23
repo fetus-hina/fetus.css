@@ -149,7 +149,7 @@ dist/favicon/%.ico: dist/favicon/%.svg
 define apple-touch-icon
     @mkdir -p $(dir $(1))
 	convert -background none $(2) -resize $(3)x$(3) $(1)
-	npx pngcrush -ow -new -rem allb -brute -q $(1) || true
+	pngcrush -ow -new -rem allb -brute -q $(1)
 endef
 
 dist/favicon/apple-touch-icon-57.png: dist/favicon/favicon.svg node_modules
