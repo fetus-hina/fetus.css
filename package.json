@@ -10,16 +10,16 @@
     "bootstrap": "^5.3.3",
     "browserify": "^17.0.1",
     "core-js": "^3.39.0",
-    "cssnano": "^6.1.2",
+    "cssnano": "^7.0.6",
     "postcss": "^8.4.49",
-    "postcss-cli": "^10.1.0",
+    "postcss-cli": "^11.0.0",
     "regenerator-runtime": "^0.14.1",
     "sass": "^1.83.1",
     "semistandard": "^17.0.0",
-    "stylelint": "^15.11.0",
-    "stylelint-config-sass-guidelines": "^10.0.0",
+    "stylelint": "^16.12.0",
+    "stylelint-config-sass-guidelines": "^12.1.0",
     "svgo": "^3.3.2",
     "terser": "^5.37.0",
-    "updates": "^14.5.0"
+    "updates": "^16.4.1"
   }
 }
