@@ -55,7 +55,7 @@ ALL_TARGETS := \
 	$(FAVICON_TARGETS) \
 	$(GZIP_TARGETS) \
 	$(BROTLI_TARGETS) \
-    $(ZSTD_TARGETS)
+	$(ZSTD_TARGETS)
 
 .PHONY: all
 all: $(ALL_TARGETS)
@@ -67,7 +67,7 @@ clean:
 		$(FONT_CSS_TARGETS) \
 		$(FONT_CSS_TARGETS:.min.css=.css) \
 		$(GZIP_TARGETS) \
-        $(ZSTD_TARGETS) \
+		$(ZSTD_TARGETS) \
 		dist/*.css \
 		dist/*.js \
 		dist/favicon
@@ -153,7 +153,7 @@ dist/favicon/%.ico: dist/favicon/%.svg
 	convert -background none $< -define icon:auto-resize=16,32,48,64 $@
 
 define apple-touch-icon
-    @mkdir -p $(dir $(1))
+	@mkdir -p $(dir $(1))
 	convert -background none $(2) -resize $(3)x$(3) $(1)
 	pngcrush -ow -new -rem allb -brute -q $(1)
 endef
