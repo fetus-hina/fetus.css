@@ -42,6 +42,7 @@ GZIP_TARGETS := \
 	dist/fetus-css.min.js.gz
 
 BROTLI_TARGETS := $(GZIP_TARGETS:.gz=.br)
+ZSTD_TARGETS := $(GZIP_TARGETS:.gz=.zstd)
 
 ALL_TARGETS := \
 	.browserslistrc \
@@ -53,7 +54,8 @@ ALL_TARGETS := \
 	$(FONT_CSS_TARGETS) \
 	$(FAVICON_TARGETS) \
 	$(GZIP_TARGETS) \
-	$(BROTLI_TARGETS)
+	$(BROTLI_TARGETS) \
+    $(ZSTD_TARGETS)
 
 .PHONY: all
 all: $(ALL_TARGETS)
@@ -65,6 +67,7 @@ clean:
 		$(FONT_CSS_TARGETS) \
 		$(FONT_CSS_TARGETS:.min.css=.css) \
 		$(GZIP_TARGETS) \
+        $(ZSTD_TARGETS) \
 		dist/*.css \
 		dist/*.js \
 		dist/favicon
@@ -138,6 +141,9 @@ dist/fetus-css.js: js/index.js $(JS_SOURCES) node_modules .browserslistrc
 %.br: %
 	brotli -fkZ $<
 	@touch $@
+
+%.zstd: %
+	zstd -fq --ultra -22 -o $@ -- $<
 
 dist/favicon/%.svg: favicon/%.svg node_modules .svgo.config.js
 	@mkdir -p $(dir $@)
