@@ -1,25 +1,25 @@
 {
   "name": "@jp3cki/fetus.css",
-  "version": "5.3.8",
+  "version": "5.3.9",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.26.0",
-    "@babel/preset-env": "^7.26.0",
-    "autoprefixer": "^10.4.20",
+    "@babel/core": "^7.27.3",
+    "@babel/preset-env": "^7.27.2",
+    "autoprefixer": "^10.4.21",
     "babelify": "^10.0.0",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.6",
     "browserify": "^17.0.1",
-    "core-js": "^3.39.0",
-    "cssnano": "^7.0.6",
-    "postcss": "^8.4.49",
-    "postcss-cli": "^11.0.0",
+    "core-js": "^3.42.0",
+    "cssnano": "^7.0.7",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
     "regenerator-runtime": "^0.14.1",
-    "sass": "^1.83.1",
+    "sass": "^1.89.0",
     "semistandard": "^17.0.0",
-    "stylelint": "^16.12.0",
+    "stylelint": "^16.19.1",
     "stylelint-config-sass-guidelines": "^12.1.0",
     "svgo": "^3.3.2",
-    "terser": "^5.37.0",
-    "updates": "^16.4.1"
+    "terser": "^5.39.2",
+    "updates": "^16.4.2"
   }
 }
