@@ -2,6 +2,8 @@
 
 @use 'mixin/bizudpgothic_bold' as biz_bold;
 @use 'mixin/bizudpgothic_regular' as biz_regular;
+@use 'mixin/formudpgothic_bold' as form_bold;
+@use 'mixin/formudpgothic_regular' as form_regular;
 @use 'mixin/generator';
 @use 'mixin/mplus1bold';
 @use 'mixin/mplus1regular';
@@ -10,5 +12,7 @@
 @include generator.webfont(fonts.$all, '');
 @include biz_bold.generate('');
 @include biz_regular.generate('');
+@include form_bold.generate('');
+@include form_regular.generate('');
 @include mplus1bold.generate('');
 @include mplus1regular.generate('');

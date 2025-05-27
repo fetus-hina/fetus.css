@@ -1,0 +1,7 @@
+@charset 'UTF-8';
+
+@use 'mixin/formudpgothic_bold' as bold;
+@use 'mixin/formudpgothic_regular' as regular;
+
+@include regular.generate('formudpgothic/');
+@include bold.generate('formudpgothic/');

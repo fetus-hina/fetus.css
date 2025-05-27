@@ -1,5 +1,7 @@
 @use '../fonts/mixin/bizudpgothic_bold';
 @use '../fonts/mixin/bizudpgothic_regular';
+@use '../fonts/mixin/formudpgothic_bold';
+@use '../fonts/mixin/formudpgothic_regular';
 @use '../fonts/mixin/generator';
 @use '../fonts/mixin/lineseedjp_bold';
 @use '../fonts/mixin/lineseedjp_regular';
@@ -18,6 +20,13 @@ $font-family-sans-serif: '';
   @include bizudpgothic_bold.generate('fonts/bizudpgothic/');
   $font-family-sans-serif: join(
     (-apple-system, 'BIZ UDPGothic', Roboto, sans-serif),
+    $font-family-emoji,
+  );
+} @else if $japanese-font == 'formudpgothic' {
+  @include formudpgothic_regular.generate('fonts/formudpgothic/');
+  @include formudpgothic_bold.generate('fonts/formudpgothic/');
+  $font-family-sans-serif: join(
+    (-apple-system, 'FORM UDPGothic', Roboto, sans-serif),
     $font-family-emoji,
   );
 } @else if $japanese-font == 'lineseedjp' {
