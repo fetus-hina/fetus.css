@@ -83,7 +83,7 @@
 
   // js/index.ts
   /*! @license
-   * Copyright (C) 2003, 2020-2025 AIZAWA Hina
+   * Copyright (C) 2003, 2020-2026 AIZAWA Hina
    * MIT License
    **/
   window.bootstrap.BackToTop = back_to_top_default;
