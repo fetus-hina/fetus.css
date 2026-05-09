@@ -2,10 +2,12 @@
 "use strict";
 
 require("core-js/modules/es.symbol.description.js");
+require("core-js/modules/es.regexp.exec.js");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+require("core-js/modules/es.array.iterator.js");
 require("core-js/modules/web.dom-collections.iterator.js");
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -85,7 +87,7 @@ class BackToTop {
 }
 var _default = exports.default = BackToTop;
 
-},{"core-js/modules/es.symbol.description.js":534,"core-js/modules/web.dom-collections.iterator.js":608}],2:[function(require,module,exports){
+},{"core-js/modules/es.array.iterator.js":316,"core-js/modules/es.regexp.exec.js":478,"core-js/modules/es.symbol.description.js":534,"core-js/modules/web.dom-collections.iterator.js":608}],2:[function(require,module,exports){
 "use strict";
 
 require("core-js/stable");
