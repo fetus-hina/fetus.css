@@ -3,9 +3,6 @@
  * MIT License
  **/
 
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
-
 import BackToTop from './back-to-top';
 import onReady from './ready';
 

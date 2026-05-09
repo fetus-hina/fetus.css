@@ -134,13 +134,15 @@ dist/fonts/%.css: scss/fonts/%.scss $(FONT_CSS_USES) node_modules .browserslistr
 	npx postcss --use cssnano --no-map -o $@ $<
 	@touch $@
 
+# target=es2017 は .browserslistrc の下限 (Chrome 60+, Firefox 60+/ESR, Safari 12+, iOS 12+) に合わせたもの。
+# このターゲット群は async/await まで (ES2017) はネイティブ対応するが、ES2018 の object spread や async iteration は Chrome 60 などでカバーしきれないため es2017 を採用。
 .PRECIOUS: dist/fetus-css.js
-dist/fetus-css.js: js/index.js $(JS_SOURCES) node_modules .browserslistrc
-	npx browserify --transform babelify -o $@ $<
+dist/fetus-css.js: js/index.js $(JS_SOURCES) node_modules
+	npx esbuild --bundle --target=es2017 --format=iife --charset=ascii --legal-comments=inline --outfile=$@ $<
 	@touch $@
 
-%.min.js: %.js node_modules .browserslistrc
-	npx terser -c -m -f ascii_only=true -o $@ $<
+dist/fetus-css.min.js: js/index.js $(JS_SOURCES) node_modules
+	npx esbuild --bundle --minify --target=es2017 --format=iife --charset=ascii --legal-comments=inline --outfile=$@ $<
 	@touch $@
 
 %.gz: %
