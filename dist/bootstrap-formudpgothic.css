@@ -2236,7 +2236,7 @@
   unicode-range: U+26FF8, U+2710D, U+27139, U+273DA-273DB, U+273FE, U+27410, U+27449, U+27614-27615, U+27631, U+27693, U+2770E, U+27723, U+27752, U+27985, U+27A84, U+27BB3, U+27BBE, U+27BC7, U+27CB8, U+27DA0, U+27E10, U+27FB7, U+2808A, U+280BB, U+28282, U+282F3, U+2840C, U+28455, U+2856B, U+285C8-285C9, U+286D7, U+286FA, U+28946, U+28949, U+2896B, U+28987-28988, U+289BA-289BB, U+28A1E, U+28A29, U+28A43, U+28A71, U+28A99, U+28ACD, U+28ADD, U+28AE4, U+28BC1, U+28BEF, U+28D10, U+28D71, U+28DFB, U+28E1F, U+28E36, U+28E89, U+28EEB, U+28F32, U+28FF8, U+292A0, U+292B1, U+29490, U+295CF, U+2967F, U+296F0, U+29719, U+29750, U+298C6, U+29A72, U+29DDB, U+29E15, U+29E3D, U+29E49, U+29E8A, U+29EC4, U+29EDB, U+29EE9, U+29FCE, U+2A01A, U+2A02F, U+2A082, U+2A0F9, U+2A38C, U+2A437, U+2A5F1, U+2A602, U+2A61A, U+2A6B2;
 }
 /*!
- * Bootstrap  v5.3.6 (https://getbootstrap.com/)
+ * Bootstrap  v5.3.8 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
@@ -2784,6 +2784,10 @@ legend + * {
 [type=search] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
+}
+[type=search]::-webkit-search-cancel-button {
+  cursor: pointer;
+  filter: grayscale(1);
 }
 
 /* rtl:raw:
@@ -8479,6 +8483,7 @@ textarea.form-control-lg {
 .spinner-grow,
 .spinner-border {
   display: inline-block;
+  flex-shrink: 0;
   width: var(--bs-spinner-width);
   height: var(--bs-spinner-height);
   vertical-align: var(--bs-spinner-vertical-align);
