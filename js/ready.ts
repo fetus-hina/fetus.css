@@ -1,4 +1,4 @@
-export default function ready (callback) {
+export default function ready (callback: () => void): void {
   if (
     document.readyState === 'interactive' ||
     document.readyState === 'complete'

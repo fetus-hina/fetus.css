@@ -1,10 +1,11 @@
+"use strict";
 (() => {
-  // js/back-to-top.js
+  // js/back-to-top.ts
   var BackToTop = class {
     setUp() {
       const button = this._createButton();
       document.body.appendChild(button);
-      button.addEventListener("click", function(ev) {
+      button.addEventListener("click", (ev) => {
         window.scroll({
           top: 0,
           left: 0,
@@ -69,7 +70,7 @@
   };
   var back_to_top_default = BackToTop;
 
-  // js/ready.js
+  // js/ready.ts
   function ready(callback) {
     if (document.readyState === "interactive" || document.readyState === "complete") {
       callback();
@@ -80,13 +81,13 @@
     });
   }
 
-  // js/index.js
+  // js/index.ts
   /*! @license
    * Copyright (C) 2003, 2020-2025 AIZAWA Hina
    * MIT License
    **/
   window.bootstrap.BackToTop = back_to_top_default;
-  ready(function() {
+  ready(() => {
     if (document.body.classList.contains("back-to-top-auto")) {
       document.body.classList.remove("back-to-top-auto");
       new back_to_top_default().setUp();

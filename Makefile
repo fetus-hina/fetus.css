@@ -9,7 +9,7 @@ CSS_SOURCES := \
 	scss/formudpgothic.scss \
 	scss/lineseedjp.scss
 
-JS_SOURCES := $(wildcard js/*.js)
+JS_SOURCES := $(wildcard js/*.ts)
 
 FONT_CSS_SOURCES := $(wildcard scss/fonts/*.scss)
 FONT_CSS_TARGETS := $(addprefix dist/fonts/,$(notdir $(FONT_CSS_SOURCES:.scss=.min.css)))
@@ -95,7 +95,8 @@ check-style-css: node_modules
 
 .PHONY: check-style-js
 check-style-js: node_modules
-	npx semistandard 'js/**/*.js'
+	npx tsc --noEmit
+	npx eslint 'js/**/*.ts'
 
 .gitignore:
 	curl -fsSL -o $@ 'https://www.gitignore.io/api/node'
@@ -137,11 +138,11 @@ dist/fonts/%.css: scss/fonts/%.scss $(FONT_CSS_USES) node_modules .browserslistr
 # target=es2017 は .browserslistrc の下限 (Chrome 60+, Firefox 60+/ESR, Safari 12+, iOS 12+) に合わせたもの。
 # このターゲット群は async/await まで (ES2017) はネイティブ対応するが、ES2018 の object spread や async iteration は Chrome 60 などでカバーしきれないため es2017 を採用。
 .PRECIOUS: dist/fetus-css.js
-dist/fetus-css.js: js/index.js $(JS_SOURCES) node_modules
+dist/fetus-css.js: js/index.ts $(JS_SOURCES) node_modules
 	npx esbuild --bundle --target=es2017 --format=iife --charset=ascii --legal-comments=inline --outfile=$@ $<
 	@touch $@
 
-dist/fetus-css.min.js: js/index.js $(JS_SOURCES) node_modules
+dist/fetus-css.min.js: js/index.ts $(JS_SOURCES) node_modules
 	npx esbuild --bundle --minify --target=es2017 --format=iife --charset=ascii --legal-comments=inline --outfile=$@ $<
 	@touch $@
 
