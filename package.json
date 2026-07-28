@@ -15,7 +15,7 @@
     "stylelint": "^17.14.1",
     "stylelint-config-sass-guidelines": "^13.0.0",
     "svgo": "^4.0.2",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^8.65.0",
     "updates": "^17.19.2"
   }
