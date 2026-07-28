@@ -4,6 +4,7 @@ CSS_SOURCES := \
 	$(FONT_CSS_USES) \
 	$(wildcard scss/custom/*.scss) \
 	$(wildcard scss/vars/*.scss) \
+	scss/_banner.scss \
 	scss/bizudpgothic.scss \
 	scss/custom.scss \
 	scss/formudpgothic.scss \

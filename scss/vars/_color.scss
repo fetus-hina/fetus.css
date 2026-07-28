@@ -1,3 +1,5 @@
+@use 'color_universal';
+
 $white: #fff;
 $black: #000;
 
@@ -25,10 +27,10 @@ $header-color: $gray-700;
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
-  "success":    $green,
-  "info":       $cyan,
-  "warning":    $yellow,
-  "danger":     $red,
+  "success":    color_universal.$green,
+  "info":       color_universal.$cyan,
+  "warning":    color_universal.$yellow,
+  "danger":     color_universal.$red,
   "light":      $gray-300,
   "dark":       $gray-900,
 );

@@ -1,3 +1,1 @@
-$japanese-font: 'lineseedjp';
-
-@import './custom';
+@use './custom' with ($japanese-font: 'lineseedjp');

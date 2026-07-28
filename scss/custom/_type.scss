@@ -1,31 +1,35 @@
 @use "sass:math";
+@use "sass:meta";
+@use '../vars/font';
 
 :root {
-  --font-family-serif: #{inspect($font-family-serif)};
+  --font-family-serif: #{meta.inspect(font.$font-family-serif)};
 }
 
 .text-sans, .text-sans-serif {
-  font-family: $font-family-sans-serif;
+  font-family: font.$font-family-sans-serif;
 }
 
 .text-serif {
-  font-family: $font-family-serif;
+  font-family: font.$font-family-serif;
 }
 
-h1, h2, h3, h4, h5, h6, .heading, legend {
-  font-family: $font-family-serif;
+// Bootstrap's `.h1 { @extend h1; }` does not reach this module under @use.
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .heading, legend {
+  font-family: font.$font-family-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-small.small, .x-small {
-  font-size: percentage($small-font-size-ratio * $small-font-size-ratio);
+// Likewise for Bootstrap's `.small { @extend small; }`.
+small.small, .small, .x-small {
+  font-size: math.percentage(font.$small-font-size-ratio * font.$small-font-size-ratio);
 }
 
 big, .big {
-  font-size: percentage(math.div(1.0, $small-font-size-ratio));
+  font-size: math.percentage(math.div(1.0, font.$small-font-size-ratio));
 }
 
 big.big {
-  font-size: percentage(math.div(1.0, ($small-font-size-ratio * $small-font-size-ratio)));
+  font-size: math.percentage(math.div(1.0, (font.$small-font-size-ratio * font.$small-font-size-ratio)));
 }

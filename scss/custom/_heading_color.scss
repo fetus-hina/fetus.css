@@ -1,9 +1,12 @@
-$tmp-colors: map-merge($theme-colors, (
-  "white": $white,
-  "body": $body-color,
-  "muted": $text-muted,
-  "black-50": rgba($black, .5),
-  "white-50": rgba($white, .5),
+@use 'sass:map';
+@use '../../node_modules/bootstrap/scss/bootstrap';
+
+$tmp-colors: map.merge(bootstrap.$theme-colors, (
+  "white": bootstrap.$white,
+  "body": bootstrap.$body-color,
+  "muted": bootstrap.$text-muted,
+  "black-50": rgba(bootstrap.$black, .5),
+  "white-50": rgba(bootstrap.$white, .5),
   "reset": inherit,
 ));
 

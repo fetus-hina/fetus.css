@@ -1,22 +1,82 @@
-/*!
- * Copyright 2003, 2020-2026 AIZAWA Hina | MIT License
- * https://github.com/fetus-hina/fetus.css
- */
+// The banner lives in its own module: a loud comment written directly in this
+// file would be re-emitted at every module boundary.
+@use 'banner';
 
-@import 'vars/math';
+// Re-export vars/font so that $japanese-font stays configurable from the
+// per-font entry points (bizudpgothic.scss, formudpgothic.scss, ...).
+@forward 'vars/font';
 
-@import 'vars/color_universal';
-@import 'vars/color';
-@import 'vars/font';
+@use 'vars/color';
+@use 'vars/color_universal';
+@use 'vars/font';
 
-@import '../node_modules/bootstrap/scss/bootstrap';
+@use '../node_modules/bootstrap/scss/bootstrap' with (
+  $blue: color_universal.$blue,
+  $purple: color_universal.$purple,
+  $pink: color_universal.$pink,
+  $red: color_universal.$red,
+  $orange: color_universal.$orange,
+  $yellow: color_universal.$yellow,
+  $green: color_universal.$green,
+  $cyan: color_universal.$cyan,
 
-@import 'custom/buttons';
-@import 'custom/footer';
-@import 'custom/header';
-@import 'custom/heading_color';
-@import 'custom/navbar';
-@import 'custom/pagination';
-@import 'custom/type';
+  $white: color.$white,
+  $black: color.$black,
 
-@import 'custom/back_to_top';
+  $gray-100: color.$gray-100,
+  $gray-200: color.$gray-200,
+  $gray-300: color.$gray-300,
+  $gray-400: color.$gray-400,
+  $gray-500: color.$gray-500,
+  $gray-600: color.$gray-600,
+  $gray-700: color.$gray-700,
+  $gray-800: color.$gray-800,
+  $gray-900: color.$gray-900,
+
+  $primary: color.$primary,
+  $secondary: color.$secondary,
+
+  $body-bg: color.$body-bg,
+  $body-color: color.$body-color,
+  $body-tertiary-bg: color.$body-tertiary-bg,
+  $headings-color: color.$headings-color,
+
+  $theme-colors: color.$theme-colors,
+
+  $link-color: color.$link-color,
+  $link-decoration: color.$link-decoration,
+  $link-hover-color: color.$link-hover-color,
+  $link-hover-decoration: color.$link-hover-decoration,
+
+  $input-bg: color.$input-bg,
+  $input-disabled-bg: color.$input-disabled-bg,
+  $input-placeholder-color: color.$input-placeholder-color,
+
+  $card-bg: color.$card-bg,
+  $dropdown-bg: color.$dropdown-bg,
+  $modal-content-bg: color.$modal-content-bg,
+  $modal-footer-bg: color.$modal-footer-bg,
+  $pagination-bg: color.$pagination-bg,
+  $popover-bg: color.$popover-bg,
+  $popover-header-bg: color.$popover-header-bg,
+  $table-bg: color.$table-bg,
+  $toast-background-color: color.$toast-background-color,
+  $toast-header-background-color: color.$toast-header-background-color,
+  $toast-header-color: color.$toast-header-color,
+
+  $font-family-sans-serif: font.$font-family-sans-serif,
+  $font-family-monospace: font.$font-family-monospace,
+  $small-font-size: font.$small-font-size,
+  $code-font-size: font.$code-font-size,
+  $kbd-font-size: font.$kbd-font-size
+);
+
+@use 'custom/buttons';
+@use 'custom/footer';
+@use 'custom/header';
+@use 'custom/heading_color';
+@use 'custom/navbar';
+@use 'custom/pagination';
+@use 'custom/type';
+
+@use 'custom/back_to_top';
