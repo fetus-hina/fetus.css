@@ -132,7 +132,7 @@ dist/fonts/%.css: scss/fonts/%.scss $(FONT_CSS_USES) node_modules .browserslistr
 	npx sass --style=expanded --charset --no-source-map --no-unicode $< | npx postcss --use autoprefixer --no-map -o $@
 	@touch $@
 
-%.min.css: %.css node_modules .browserslistrc
+%.min.css: %.css node_modules .browserslistrc .cssnanorc.json
 	npx postcss --use cssnano --no-map -o $@ $<
 	@touch $@
 
