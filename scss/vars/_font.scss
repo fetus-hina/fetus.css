@@ -1,3 +1,6 @@
+@use 'sass:list';
+@use 'sass:math';
+
 @use '../fonts/mixin/bizudpgothic_bold';
 @use '../fonts/mixin/bizudpgothic_regular';
 @use '../fonts/mixin/formudpgothic_bold';
@@ -18,28 +21,28 @@ $font-family-sans-serif: '';
 @if $japanese-font == 'bizudpgothic' {
   @include bizudpgothic_regular.generate('fonts/bizudpgothic/');
   @include bizudpgothic_bold.generate('fonts/bizudpgothic/');
-  $font-family-sans-serif: join(
+  $font-family-sans-serif: list.join(
     (-apple-system, 'BIZ UDPGothic', Roboto, sans-serif),
     $font-family-emoji,
   );
 } @else if $japanese-font == 'formudpgothic' {
   @include formudpgothic_regular.generate('fonts/formudpgothic/');
   @include formudpgothic_bold.generate('fonts/formudpgothic/');
-  $font-family-sans-serif: join(
+  $font-family-sans-serif: list.join(
     (-apple-system, 'FORM UDPGothic', Roboto, sans-serif),
     $font-family-emoji,
   );
 } @else if $japanese-font == 'lineseedjp' {
   @include lineseedjp_regular.generate('fonts/lineseedjp/');
   @include lineseedjp_bold.generate('fonts/lineseedjp/');
-  $font-family-sans-serif: join(
+  $font-family-sans-serif: list.join(
     (-apple-system, 'LINE Seed JP', Roboto, sans-serif),
     $font-family-emoji,
   );
 } @else if $japanese-font == 'mplus1' {
   @include mplus1regular.generate('fonts/mplus1/');
   @include mplus1bold.generate('fonts/mplus1/');
-  $font-family-sans-serif: join(
+  $font-family-sans-serif: list.join(
     (-apple-system, Roboto, 'M PLUS 1', sans-serif),
     $font-family-emoji,
   );
@@ -47,21 +50,21 @@ $font-family-sans-serif: '';
   @error 'variable $japanese-font is invalid';
 }
 
-$font-family-serif: join(
+$font-family-serif: list.join(
   ('PT Serif', 'Noto Serif JP', serif),
   $font-family-emoji,
 );
-$font-family-monospace: join(
+$font-family-monospace: list.join(
   ('JetBrains Mono NL', monospace),
   $font-family-emoji,
 );
-$font-family-footer: join(
+$font-family-footer: list.join(
   ('Lato Latin', 'Lato'),
   $font-family-sans-serif,
 );
 
 $small-font-size-ratio: 0.78615138; // sqrt(0.618...)
-$small-font-size: percentage($small-font-size-ratio);
+$small-font-size: math.percentage($small-font-size-ratio);
 
 $code-font-size: 1em;
 $kbd-font-size: $small-font-size;
